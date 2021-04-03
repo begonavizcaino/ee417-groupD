@@ -11,6 +11,9 @@ public class TableRow {
 		id = rs.getInt("id");
 	}
 
+	public TableRow() {
+	}
+
 	public int getId() {
 		return id;
 	}
