@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Database {
-	private static final String jdbcUrl = "jdbc:mysql://localhost:3306/dcu_group_d";
-	private static final String user = "root";
-	private static final String pass = "";
+	private static final String jdbcUrl = "jdbc:mysql://ee417.cyhgg00hth8k.eu-west-3.rds.amazonaws.com/ee417";
+	private static final String user = "ee417";
+	private static final String pass = "ee417groupd";
 	
 	public static Dao<User> userDao = new UserDao();
 	
