@@ -3,7 +3,7 @@ package db;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class User extends TableRow {
+public class User extends TableRowId {
 
 	private String username;
 	private String password;
