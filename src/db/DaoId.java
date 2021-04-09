@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public abstract class DaoId<T extends TableRowId> extends Dao<T> {
 	
-	T findOneById(int id) throws SQLException {
+	public T findOneById(int id) throws SQLException {
 		PreparedStatement st = Database.getDbConnection().prepareStatement("SELECT * FROM " + getTableName() + " WHERE id = ?");
 		st.setInt(1, id);
 		ResultSet rs = st.executeQuery();
