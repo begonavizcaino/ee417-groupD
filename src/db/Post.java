@@ -59,6 +59,10 @@ public class Post extends TableRowId {
 		this.message = message;
 	}
 	
+	public String getDate() {
+		return "not implemented";// TODO: add date
+	}
+	
 	public ArrayList<AttachedContent> getAttachedContent() throws SQLException {
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("post_id", getId() + "");
@@ -66,6 +70,16 @@ public class Post extends TableRowId {
 	}
 	
 	public Post getParentPost() throws SQLException {
-		return Database.postDao.findOneById(parentId);
+		return parentId >= 0 ? Database.postDao.findOneById(parentId) : null;
+	}
+	
+	public ArrayList<Post> getComments() throws SQLException {
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("parent_id", getId() + "");
+		return Database.postDao.findBy(map);
+	}
+	
+	public User getUser() throws SQLException {
+		return Database.userDao.findOneById(userId);
 	}
 }
