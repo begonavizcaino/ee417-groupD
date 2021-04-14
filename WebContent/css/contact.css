@@ -1,6 +1,4 @@
 
-
-
 /* General Settings
 --------------------------------------------------------------------------------------------------------------- */
 html{
@@ -244,109 +242,6 @@ h1, h2, h3, h4, h5, h6, .heading{
     font-size:22px;
     text-transform:uppercase;
 }
-
-
-/* Page Intro
---------------------------------------------------------------------------------------------------------------- */
-#pageintro{
-    padding:150px 0 300px;
-    
-}
-
-/* Banner Style */
-.main-banner .container-fluid {
-	padding: 0px 10px;
-	margin-bottom: -24px;
-}
-.owl-banner {
-	padding-top: 110px;
-}
-
-.owl-banner .item {
-	position: relative;
-}
-
-.owl-banner .item .item-content {
-	position: absolute;
-	bottom: 40px;
-	left: 40px;
-}
-
-.owl-banner .item .item-content .meta-category span {
-	color: #f48840;
-	font-size: 18px;
-	text-transform: uppercase;
-	font-weight: 900;
-	letter-spacing: 0.25px;
-}
-
-.owl-banner .item .item-content h4 {
-	font-size: 24px;
-	font-weight: 900;
-	color: #fff;
-	letter-spacing: 0.5px;
-	text-transform: capitalize;
-	margin: 10px 0px 12px 0px;
-}
-
-.owl-banner .item .item-content ul li {
-	display: inline-block;
-	margin-right: 8px;
-}
-
-.owl-banner .item .item-content ul li:after {
-	content: '|';
-	color: #fff;
-	margin-left: 8px;
-}
-
-.owl-banner .item .item-content ul li:last-child::after {
-	display: none;
-}
-
-.owl-banner .item .item-content ul li a {
-	font-size: 14px;
-	color: #fff;
-	font-weight: 500;
-	transition: all .3s;
-}
-
-.owl-banner .item .item-content ul li a:hover {
-	color: #f48840;
-}
-
-.owl-banner .owl-nav {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-}
-
-.owl-banner .owl-nav .owl-prev {
-	position: absolute;
-	left: 40px;
-}
-
-.owl-banner .owl-nav .owl-next {
-	position: absolute;
-	right: 40px;
-}
-
-.owl-banner .owl-nav button {
-	outline: none;
-}
-
-.owl-banner .owl-nav button span {
-	color: #fff;
-	font-size: 36px;
-	width: 60px;
-	height: 60px;
-	display: inline-block;
-	text-align: center;
-	line-height: 60px;
-	background-color: rgba(250,250,250,0.3);
-}
-
-
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
@@ -858,8 +753,6 @@ input:focus, textarea:focus, *:required:focus{
 
  /* Conatct Us--> start
 --------------------------------------------------------------------------------------------------------------- */
-
-
 *{
 	margin: 0;
 	padding: 0;
@@ -873,18 +766,7 @@ section
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: hsla(13, 90%, 58%, 1);
-}
-
-section::before
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 100%;
-	background: #000;
+	background: hsla(13, 24%, 49%, 1);
 }
 
 .container
@@ -983,7 +865,10 @@ section::before
 {
 	position: absolute;
 	padding: 70px 50px;
+	padding-top: 134px;
+	margin-top: -72px;
 	padding-left: 250px;
+	margin-bottom: 100px;
 	margin-left: 150px;
 	width: calc(100% - 150px);
 	height: 100%;
@@ -1127,7 +1012,7 @@ section::before
 {
 	section
 	{
-		background: #fff38e;		
+		background: orange;
 	}
 	
 	section::before
@@ -1187,14 +1072,4 @@ section::before
 		width: 100%;
 	}
 }
-
-
-
-
-
-
-
-
-
-
 

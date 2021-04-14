@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +8,7 @@
     <title>ISB Post</title>
     <script src="script/jquery-3.5.1.js" type="text/javascript"></script>
     <meta name='viewport' content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/landingpage.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/createpost.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/flex-slider.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/owl.css'>
@@ -15,77 +18,12 @@
     <script src="https://kit.fontawesome.com/60b74c23d5.js" crossorigin="anonymous"></script>
 </head>
 <body >
-<!-- ******************************************************************************************* -->
-    <!-- Top Header Start -->
 
-    <div class="wrapper row0">
-        <div id="topbar" class="hoc clear"> 
-            <div class="fl_left">
-                <ul>
-                <li><i class="fa fa-phone"></i> +000 (00) 000 0000</li>
-                <li><i class="fa fa-envelope-o"></i> info@internationalblog.com</li>
-                </ul>
-            </div>
-            <div class="fl_right">
-                <ul>
-                <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
-                <li><a href="signup.html">Login</a></li>
-                <li><a href="signup.html">Sign-Up</a></li>
-                <li id="searchform">
-                    <div>
-                      <form action="#" method="post">
-                        <fieldset>
-                          <legend>Quick Search:</legend>
-                          <input type="text" placeholder="Enter search term&hellip;">
-                          <button type="submit"><i class="fas fa-search"></i></button>
-                        </fieldset>
-                      </form>
-                    </div>
-                  </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+	<%@ include file="menubar.jsp" %>
 
-    <!-- Top Header End -->
-<!-- ******************************************************************************************* -->
-
-<!-- ******************************************************************************************* -->
-    <!-- Top Background Image Wrapper -->
-
-    <div class="bgded overlay"> 
-        <!-- Navigation/Logo bar Start -->
-        <div class="wrapper row1">
-            <header id="header" class="hoc clear"> 
-                <!-- logo Area -->
-                <div id="logo" class="fl_left">
-                    <h1><a href="index.html">International Blog</a></h1>
-                </div>
-                
-                <!-- Main Navigation Menue with Full menue items -->
-                <nav id="mainav" class="fl_right">
-                    <ul class="clear">
-                      <li class="active"><a href="index.html">Home</a></li>
-                      <li><a class="drop" href="#">Blogs</a>
-                        <ul>
-                          <li><a href="#">General</a></li>
-                          <li><a href="#">Academic</a></li>
-                          <li><a href="#">Student life</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Posts</a>
-                      </li>
-                      <li><a href="index.html">About Us</a></li>
-                      <li><a href="contactus.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-        <!-- Navigation/Logo bar End -->
-
-        <!-- Page Intro  Banner Starts -->
-
-        <div class="main-banner header-text">
+    <!-- Page Intro  Banner Starts -->
+	<div class="bgded overlay"> 
+     	<div class="main-banner header-text">
             <div class="container-fluid">
                 <div class="owl-banner owl-carousel">
                     <div class="item">
@@ -194,7 +132,7 @@
 <!-- ******************************************************************************************* -->
 
 <!-- ******************************************************************************************* -->
-    <!-- Creat Posts Start-->
+    <!-- Create Posts Start-->
 
     <div class="wrapper ">
         <div class="hoc container clear"> 
@@ -240,64 +178,10 @@
         </div>
     </div>
        
-    <!-- Crea Posts End-->
+    <!-- Create Posts End-->
 <!-- ******************************************************************************************* -->
 
-
-<!-- ******************************************************************************************* -->
-    <!-- Footer-> Main Footer Start -->
-
-    <div class="wrapper row4">
-        <footer id="footer" class="hoc clear"> 
-            <div class="one_third first">
-            <h6 class="heading">Reach out</h6>
-            <p>Getting in Touch is easy! Find us & follow us here</p>
-            <ul class="faico clear">
-              <li><a class="faicon-facebook" href="https://www.facebook.com/interBlog417/"><i class="fab fa-facebook"></i></a></li>
-              <li><a class="faicon-linkedin" href="https://www.instagram.com/interblog417/"><i class="fab fa-linkedin"></i></a></li>
-              <li><a class="faicon-twitter" href="https://twitter.com/interna48111070"><i class="fab fa-twitter"></i></a></li>
-              <li><a class="faicon-instagram" href="https://www.linkedin.com/in/international-blog/"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-          <div class="one_third ">
-            <h6 class="heading">Explore More</h6>
-            <ul class="nospace linklist">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="aboutus.html">About Us</a></li>
-              <li><a href="contactus.html">Contact Us</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
-          </div>
-          <div class="one_third">
-            <h6 class="heading">Our Newsletter</h6>
-            <p class="nospace btmspace-15">Enter your email address to follow this blog and receive notifications by email.</p>
-            <form method="post" action="#">
-              <fieldset>
-                <legend>Newsletter:</legend>
-                <input class="btmspace-15" type="text" value="" placeholder="Name">
-                <input class="btmspace-15" type="text" value="" placeholder="Email">
-                <button  type="submit" value="submit">Submit</button>
-              </fieldset>
-            </form>
-          </div>
-        </footer>
-      </div>
-
-     <!-- Footer-> Main Footer End -->
-<!-- ******************************************************************************************* -->
-
-<!-- ******************************************************************************************* -->
-    <!-- Footer-> Copy Right bar Start -->
-
-    <div class="wrapper row5">
-        <div id="copyright" class="hoc clear"> 
-            <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> - All Rights Reserved - <a href="#">InternationalBlog</a></p>
-        </div>
-    </div>
-
-    <!-- Footer-> Copy Right bar End -->
-<!-- ******************************************************************************************* -->
-
+<%@ include file="footer.jsp" %>
 
 <!-- ******************************************************************************************* -->
     <!-- Java Script Start-->

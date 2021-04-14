@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6, .heading{
 	margin-bottom: -24px;
 }
 .owl-banner {
-	padding-top: 110px;
+	padding-top: 20px;
 }
 
 .owl-banner .item {
@@ -351,7 +351,7 @@ h1, h2, h3, h4, h5, h6, .heading{
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
 .container{
-    padding:80px 0;
+    padding: 20px 0;
 }
 
 /* Content */
@@ -390,10 +390,10 @@ h1, h2, h3, h4, h5, h6, .heading{
     margin-bottom:10px;
     font-size:1.2rem;
 }
-#introblocks > ul > li > article footer{
+#introblocks > ul > li > article {
     border-top:1px solid;
 }
-#introblocks > ul > li > article footer a{
+#introblocks > ul > li > article {
     display:block;
     position:relative;
     width:100%; 
@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5, h6, .heading{
     padding:0 20px; 
     text-transform:uppercase;
 }
-#introblocks > ul > li > article footer a::after{
+#introblocks > ul > li > article {
     position:absolute; 
     top:0; 
     right:0; 
@@ -412,141 +412,6 @@ h1, h2, h3, h4, h5, h6, .heading{
     content:"\f105"; 
     border-left:1px solid;
 }
-
-
-/* Footer -->
---------------------------------------------------------------------------------------------------------------- */
-#footer .heading{
-    color:#FFFFFF;
-}
-#footer hr, #footer .borderedbox, #footer .linklist li{
-    border-color:rgba(255,255,255,.1);
-}
-#footer input, #footer button{
-    border-color:transparent;
-}
-#footer input{
-    color:#9FA7AF; background-color:#161616;
-}
-#footer input:focus{
-    border-color:#53D3DE;
-}
-#footer button{
-    color:#000000; background-color:#ffffff;
-}
-#footer{
-    text-align:center;
-    
-}
-#footer a{
-    display:block;
-}
-#footer{
-    padding:80px 0;
-}
-
-#footer .heading{
-    margin-bottom:50px;
-    font-size:1.5rem;
-}
-
-#footer .linklist li{
-    display:block;
-    margin-bottom:15px;
-    padding:0 0 15px 0;
-    border-bottom:1px solid;
-}
-#footer .linklist li:last-child{
-    margin:0;
-    padding:0; 
-    border:none;
-}
-#footer .linklist li::before, #footer .linklist li::after{
-    display:table; content:"";
-}
-#footer .linklist li, #footer .linklist li::after{
-    clear:both;
-}
-
-#footer input, #footer button{
-    border:1px solid;
-}
-#footer input{
-    display:block;
-    width:100%; 
-    padding:8px;
-}
-#footer button{
-    padding:8px 18px 10px; 
-    text-transform:uppercase; 
-    font-weight:700; 
-    cursor:pointer;
-}
-
-/* Footer --> Font Awesome Social Icons
---------------------------------------------------------------------------------------------------------------- */
-.faico{
-    margin:0; 
-    padding:0; 
-    list-style:none;
-}
-.faico li{
-    display:inline-block; 
-    margin:8px 5px 0 0; 
-    padding:0; 
-    line-height:normal;
-}
-.faico li:last-child{
-    margin-right:0;
-}
-.faico a{
-    display:inline-block;
-    width:36px; height:36px;
-    line-height:36px; 
-    font-size:18px; 
-    text-align:center; 
-    border-radius:50%;
-    background-clip:padding-box;
-}
-
-.faico a{
-    color:#000000; 
-    background-color:#FFFFFF;
-}
-.faico a:hover{
-    color:#FFFFFF;
-}
-
-.faicon-dribble:hover{
-    background-color:#EA4C89;
-}
-.faicon-facebook:hover{
-    background-color:#3B5998;
-}
-.faicon-google-plus:hover{
-    background-color:#DB4A39;
-}
-.faicon-linkedin:hover{
-    background-color:#0E76A8;
-}
-.faicon-twitter:hover{
-    background-color:#00ACEE;
-}
-.faicon-instagram:hover
-{background-color:#4E658E;
-}
-
-
-/* Footer --> Copyright
---------------------------------------------------------------------------------------------------------------- */
-#copyright{
-    padding:20px 0;
-    text-align: center;
-}
-#copyright *{
-    margin:0; padding:0;
-}
-
 
 /* Transition Fade
 --------------------------------------------------------------------------------------------------------------- */
@@ -735,23 +600,14 @@ input:focus, textarea:focus, *:required:focus{
 
 
 /* Page Intro */
-#pageintro footer input, #pageintro footer button{color:#000000; background-color:#FFFFFF;}
+#pageintro, #pageintro {color:#000000; background-color:#FFFFFF;}
 
 
 
 
 /* Content Area */
 #introblocks > ul > li > article {color:hsla(13, 90%, 58%, 1); background-color:#FFFFFF;}
-#introblocks > ul > li > article footer, #introblocks > ul > li > article footer a::after{border-color:#D7D7D7;}
-
-
-
-
-/* Footer */
-#footer .heading{color:#ffffff;}
-#footer nav a{color:#FFFFFF;}
-#footer nav li:first-child a, #footer nav a:hover{color:#ffffff;}
-
+#introblocks > ul > li > article, #introblocks > ul > li > article {border-color:#D7D7D7;}
 
 /* Navigation */
 #mainav li a{color:#ffffff;}
@@ -796,8 +652,6 @@ input:focus, textarea:focus, *:required:focus{
 	#comments input[type="reset"]{margin-top:10px;}
 	.pagination li{display:inline-block; margin:0 5px 5px 0;}
 
-	#footer{}
-
 	#copyright{}
 	#copyright p:first-of-type{margin-bottom:10px;}
 }
@@ -832,7 +686,7 @@ input:focus, textarea:focus, *:required:focus{
 @media screen and (max-width:450px){
 	#topbar ul li{margin-bottom:2px; padding-right:0; border-right:none;}
 
-	#pageintro li footer form{max-width:none; width:100%;}
+	#pageintro li form{max-width:none; width:100%;}
 }
 
 
@@ -859,7 +713,7 @@ input:focus, textarea:focus, *:required:focus{
 /* Blog Posts */
 
 .blog-posts {
-	margin-top: 100px;
+	margin-top: 20px;
 }
 
 .blog-posts .blog-post {
