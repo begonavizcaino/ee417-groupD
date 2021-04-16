@@ -3,6 +3,8 @@ package db;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class PostDao extends DaoId<Post> {
 	
@@ -27,6 +29,16 @@ public class PostDao extends DaoId<Post> {
 		st.setString(4, data.getMessage());
 		st.setInt(5, data.getId());
 		st.execute();
+	}
+	
+	public ArrayList<Post> findCategories() throws SQLException {
+		ArrayList<Post> ret = new ArrayList<Post>();
+		PreparedStatement st = Database.getDbConnection().prepareStatement("SELECT * FROM " + getTableName() + " WHERE parent_id IS NULL");
+		ResultSet rs = st.executeQuery();
+		while(rs.next()) {
+			ret.add(createNew(rs));
+		}
+		return ret;
 	}
 
 	@Override
