@@ -23,7 +23,8 @@ public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("login.jsp").forward(request, response);
+		request.setAttribute("mode", "login");
+		request.getRequestDispatcher("signup.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

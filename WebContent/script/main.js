@@ -21,12 +21,13 @@ $(document).ready(function()
     const email = document.getElementById('email');
     const password = document.getElementById('password');
     const password2 = document.getElementById('password2');
+    const nationality = document.getElementById('nationality');
+    const studying = document.getElementById('studying_region');
     // Form submit event, when user clicks the Sign-up button //
     form.addEventListener('submit', e =>
-    {
-        e.preventDefault(); // preventing submission to a server
-        
-        checkInputs();
+    {        
+        if(!checkInputs())
+        	e.preventDefault(); // preventing submission to a server
     });
 
     function checkInputs() {
@@ -37,11 +38,15 @@ $(document).ready(function()
         const emailValue = email.value.trim();
         const passwordValue = password.value.trim();
         const password2Value = password2.value.trim();
+        const nationalityValue = nationality.value.trim();
+        const studyingValue = studying.value.trim();
+        let b = true;
 
         if(usernameValue === '') {
             // show Error
             // add Error class
             setErrorFor(username, 'Username cannot be blank');
+            b = false;
         } else {
             // add Success class
             setSuccessFor(username);
@@ -50,6 +55,7 @@ $(document).ready(function()
             // show Error
             // add Error class
             setErrorFor(username2, 'Username cannot be blank');
+            b = false;
         } else {
             // add Success class
             setSuccessFor(username2);
@@ -57,24 +63,43 @@ $(document).ready(function()
         
         if(emailValue === '') {
             setErrorFor(email, 'Email cannot be blank');
+            b = false;
         } else if (!isEmail(emailValue)) {
             setErrorFor(email, 'Not a valid email');
+            b = false;
         } else {
             setSuccessFor(email);
         }
         
         if(passwordValue === '') {
             setErrorFor(password, 'Password cannot be blank');
+            b = false;
         } else {
             setSuccessFor(password);
         }
         
         if(password2Value === '') {
             setErrorFor(password2, 'Password2 cannot be blank');
+            b = false;
         } else if(passwordValue !== password2Value) {
             setErrorFor(password2, 'Passwords does not match');
+            b = false;
         } else{
             setSuccessFor(password2);
+        }
+        
+        if(nationalityValue === '_') {
+            setErrorFor(nationality, 'Please choose a nationality');
+            b = false;
+        } else{
+            setSuccessFor(nationality);
+        }
+        
+        if(studyingValue === '_') {
+            setErrorFor(studying, 'Please choose a studying region');
+            b = false;
+        } else {
+            setSuccessFor(studying);
         }
 
         //show success message

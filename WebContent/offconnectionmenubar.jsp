@@ -1,3 +1,4 @@
+<%@page import="utils.Utils"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -14,8 +15,13 @@
         <div class="fl_right">
             <ul>
             <li><a href="index.jsp"><i class="fa fa-lg fa-home"></i></a></li>
-            <li><a href="signup.jsp">Login</a></li>
-            <li><a href="signup.jsp">Sign-Up</a></li>
+            <% if(!Utils.isUserConnected(request)) { %>
+	            <li><a href="signup.jsp">Login</a></li>
+	            <li><a href="signup.jsp?mode=signup">Sign-Up</a></li>
+            <% } else { %>
+            	<li><a href="profile.jsp">Profile</a></li>
+            	<li><a href="Disconnect">Disconnect</a></li>
+            <% } %>
             <li id="searchform">
                 <div>
                 <form action="#" method="post">

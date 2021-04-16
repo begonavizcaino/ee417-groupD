@@ -1,15 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="db.Role"%>
-<%@page import="db.User"%>
-<%@page import="utils.Utils"%>
-<% 
-User u = Utils.getUser(request);
-if(u == null) {
-	response.sendRedirect("./login.jsp");
-	return;// stop the rest of the html from being sent alongside the redirect (faster + safer)
-}
-%>
 
 <!DOCTYPE html>
 <html>
