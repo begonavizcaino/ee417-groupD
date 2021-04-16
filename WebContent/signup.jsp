@@ -21,7 +21,7 @@ boolean mode = "signup".equals(request.getAttribute("mode")) || "signup".equals(
 </head>
 <body >
 
-	<%@ include file="offconnectionmenubar.jsp" %>
+	<%@ include file="menubar.jsp" %>
 
 <!-- ******************************************************************************************* -->
     <!-- About Us Start-->

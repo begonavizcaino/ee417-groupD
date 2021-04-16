@@ -13,7 +13,7 @@
 </head>
 <body >
 
-	<%@ include file="offconnectionmenubar.jsp" %>
+	<%@ include file="menubar.jsp" %>
 
     <!-- ******************************************************************************************* -->
     <!-- Testimonials Start-->
