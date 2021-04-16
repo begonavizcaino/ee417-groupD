@@ -90,6 +90,22 @@ h1, h2, h3, h4, h5, h6, .heading{
     display:block;
     margin:0 auto;} /* to center content */
 
+/*About Us
+--------------------------------------------------------------------------------------------------------------- */
+#aboutus{
+	margin-top:20px;
+}
+
+/*Privacy
+--------------------------------------------------------------------------------------------------------------- */
+#privacy{
+	margin-top:20px;
+	background: hsla(12, 23%, 49%, 1);
+}
+
+#privacytext{
+	padding-top: 40px;
+}
 
 /* Grid
 --------------------------------------------------------------------------------------------------------------- */
@@ -281,6 +297,10 @@ h1, h2, h3, h4, h5, h6, .heading{
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
+#highlights{
+	padding-top:20px;
+}
+
 .container{
     padding:80px 0;
 }
@@ -301,7 +321,7 @@ h1, h2, h3, h4, h5, h6, .heading{
 }
 #introblocks > ul{
     display:block;
-    margin:-200px 0 80px;
+    margin:20px 0 80px;
 }
 #introblocks > ul > li{
     text-align:center;
@@ -373,7 +393,7 @@ h1, h2, h3, h4, h5, h6, .heading{
     display:block;
 }
 #footer{
-    padding:80px 0;
+    padding:40px 0;
 }
 
 #footer .heading{
@@ -629,7 +649,7 @@ input:focus, textarea:focus, *:required:focus{
     background-color:hsla(13, 90%, 58%, 1);
 }
 .row4{
-    olor:#CBCBCB;
+    color:#CBCBCB;
     background-color:#000000;
 }
 .row5, .row5 a{
