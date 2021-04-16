@@ -46,4 +46,8 @@ public class User extends TableRowId {
 	public void setRole(Role role) {
 		this.role = role;
 	}
+	
+	public String getImage( ) {
+		return "";// TODO: implement image in user
+	}
 }
