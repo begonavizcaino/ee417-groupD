@@ -10,20 +10,38 @@ public class UserDao extends DaoId<User> {
 
 	@Override
 	public void insert(User data) throws SQLException {
-		PreparedStatement st = Database.getDbConnection().prepareStatement("INSERT INTO " + tableName + " (username, password, role) VALUES (?, ?, ?)");
-		st.setString(1, data.getUsername());
-		st.setString(2, data.getPassword());
-		st.setString(3, data.getRole().toString());
+		int i=1;
+		PreparedStatement st = Database.getDbConnection().prepareStatement("INSERT INTO " + tableName + 
+				" (username, password, role, picture, firstname, lastname, nationality, sudyin, birth) "
+				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		st.setString(i++, data.getUsername());
+		st.setString(i++, data.getPassword());
+		st.setString(i++, data.getRole().toString());
+		st.setString(i++, data.getPicture());
+		st.setString(i++, data.getFirstName());
+		st.setString(i++, data.getLastName());
+		st.setString(i++, data.getNationality());
+		st.setString(i++, data.getStudyIn());
+		st.setDate(i++, data.getBirth());
 		st.execute();
 	}
 
 	@Override
 	public void update(User data) throws SQLException {
-		PreparedStatement st = Database.getDbConnection().prepareStatement("UPDATE " + tableName + " SET username = ?, password = ?, role = ? WHERE id = ?");
-		st.setString(1, data.getUsername());
-		st.setString(2, data.getPassword());
-		st.setString(3, data.getRole().toString());
-		st.setInt(4, data.getId());
+		int i=1;
+		PreparedStatement st = Database.getDbConnection().prepareStatement("UPDATE " + tableName
+				+ " SET username = ?, password = ?, role = ?, picture = ?, firstname = ?, lastname = ?, nationality = ?, sudyin = ?, birth = ? "
+				+ "WHERE id = ?");
+		st.setString(i++, data.getUsername());
+		st.setString(i++, data.getPassword());
+		st.setString(i++, data.getRole().toString());
+		st.setString(i++, data.getPicture());
+		st.setString(i++, data.getFirstName());
+		st.setString(i++, data.getLastName());
+		st.setString(i++, data.getNationality());
+		st.setString(i++, data.getStudyIn());
+		st.setDate(i++, data.getBirth());
+		st.setInt(i++, data.getId());
 		st.execute();
 	}
 

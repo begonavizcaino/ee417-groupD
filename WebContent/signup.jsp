@@ -69,13 +69,13 @@ boolean mode = "signup".equals(request.getAttribute("mode")) || "signup".equals(
                         </div>
                         <!-- Re-type Password -->
                         <div class="form-control">
-                            <input id="password2" type="password" name="confirm_password" placeholder="Confirm Password" />
+                            <input id="password2" type="password" name="confirm" placeholder="Confirm Password" />
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error Message</small>
                         </div>
                         <!-- Date of Birth input -->
-                        <input type="date" placeholder="Date of Birth" name="dob"/>
+                        <input type="date" placeholder="Date of Birth" name="birth"/>
                         
                         <!-- Country Input-->
                         <div class="form-control">

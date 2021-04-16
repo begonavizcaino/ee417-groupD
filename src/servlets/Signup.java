@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.HashMap;
 
@@ -35,12 +36,19 @@ public class Signup extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String confirm = request.getParameter("confirm");
-		if(username != null && password != null && password.equals(confirm) && password.length() >= 4) {
+		String firstName = request.getParameter("firstname");
+		String lastName = request.getParameter("lastname");
+		Date birth = Date.valueOf(request.getParameter("birth"));
+		String nationality = request.getParameter("nationality");
+		String studyIn = request.getParameter("studyIn");
+		
+		if(username != null && password != null && password.equals(confirm) && password.length() >= 4 && 
+				firstName != null && lastName != null && birth != null && nationality != null && studyIn != null) {
 			HashMap<String, String> map = new HashMap<String, String>();
 			map.put("username", username);
 			try {
 				if(Database.userDao.findOneBy(map) == null) {
-					User u = new User(username, password, Role.USER);
+					User u = new User(username, password, Role.USER, "", firstName, lastName, nationality, studyIn, birth);
 					Database.userDao.insert(u);
 					HttpSession session = request.getSession();
 					session.setAttribute("username", username);
