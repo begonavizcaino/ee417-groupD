@@ -44,17 +44,9 @@ try {
 	    <script src="https://kit.fontawesome.com/60b74c23d5.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<!-- TODO: @Bing add header & post content, formatting etc here (from post1.html) -->
-<!-- ******************************************************************************************* -->
-	    <!-- Top Header Start -->
-	
-	    
-	
-	    <!-- Top Header End -->
-<!-- ******************************************************************************************* -->
+		
+	<%@ include file="menubar.jsp" %>
 
-
-<!-- ******************************************************************************************* -->
     <!-- Blog Posts Start-->
 
     <div class="wrapper">
@@ -145,23 +137,6 @@ try {
                                     <div class="sidebar-item categories">
                                         <div class="sidebar-heading">
                                             <h2>Categories</h2>
-                                        </div>
-                                        <div class="content">
-                                            <ul>
-                                                <li><a href="#">- Academic</a></li>
-                                                <li><a href="#">- Campus</a></li>
-                                                <li><a href="#">- College life</a></li>
-                                                <li><a href="#">- Student Life</a></li>
-                                                <li><a href="#">- Sports</a></li>
-                                                <li><a href="#">- Creativity</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="sidebar-item tags">
-                                        <div class="sidebar-heading">
-                                            <h2>Tags</h2>
                                         </div>
                                         <div class="content">
                                             <ul>
