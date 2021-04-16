@@ -9,7 +9,7 @@
 <% 
 User u = Utils.getUser(request);// get the user
 if(u == null) {
-	response.sendRedirect("./login.jsp");
+	response.sendRedirect("./signup.jsp");
 	return;// stop the rest of the html from being sent alongside the redirect (faster + safer)
 }
 Post post;
@@ -127,7 +127,7 @@ try {
 		                            			<img src=<%= comment.getUser().getPicture() %> alt="">  <!-- get the poster's photo -->
 		                            		</div>	
 		                            		<div class="right-content">
-		                            			<h4><%= comment.getUser().getUsername() %><span><%= comment.getDate() %></span></h4> <!-- get the poster's name and post time -->
+		                            			<h4><%= comment.getUser().getFirstName() %> <%= comment.getUser().LastName() %><span><%= comment.getDate() %></span></h4> <!-- get the poster's name and post time -->
 		                            			<p><%= comment.getMessage() %></p> 		<!-- get the poster's message -->
 		                            		</div>
 		                              	</li>
@@ -150,10 +150,11 @@ try {
                     <div class="col-lg-12">
                         <div class="sidebar-item submit-comment">
                           <div class="sidebar-heading">
-                            <h2>Your comment</h2>
+                            <h2>Leave a comment</h2>
                           </div>
                           <div class="content">
-                            <form id="comment" action="#" method="post">
+                            <form id="comment" action="Comment" method="post">
+                            <input type="text" name="postid" class="hidden" value="<%= post.getId() %>" />
                               <div class="row">
                                 <div class="col-lg-12">
                                   <fieldset>

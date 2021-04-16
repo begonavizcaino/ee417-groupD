@@ -7,7 +7,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% 
-User u = Utils.getUser(request);// get the user
+User menubaru = Utils.getUser(request);// get the user
 ArrayList<Post> categories = Database.postDao.findCategories();
 %>
 <!-- Top Header Start -->
@@ -23,7 +23,7 @@ ArrayList<Post> categories = Database.postDao.findCategories();
         <div class="fl_right">
             <ul>
             <li><a href="index.jsp"><i class="fa fa-lg fa-home"></i></a></li>
-            <% if(u == null) { %>
+            <% if(menubaru == null) { %>
 	            <li><a href="signup.jsp">Login</a></li>
 	            <li><a href="signup.jsp?mode=signup">Sign-Up</a></li>
             <% } else { %>
@@ -62,7 +62,7 @@ ArrayList<Post> categories = Database.postDao.findCategories();
 	            <nav id="mainav" class="fl_right">
 	                <ul class="clear">
 	                <li class="active"><a href="index.jsp">Home</a></li>
-	                <% if(u != null) { %>
+	                <% if(menubaru != null) { %>
 		                <li><a class="drop" href="main.jsp">Blogs</a>
 		                    <ul>
 		                    <% for(Post c : categories) { %>
@@ -74,7 +74,7 @@ ArrayList<Post> categories = Database.postDao.findCategories();
 		                <li><a href="chat.jsp">Chat</a></li>
 	                <%
 	                } 
-	                if (u != null && u.getRole() == Role.ADMIN) {
+	                if (menubaru != null && menubaru.getRole() == Role.ADMIN) {
 	                %>
 	                	<li><a href="admin.jsp">Admin</a></li>
                 	<% } %>

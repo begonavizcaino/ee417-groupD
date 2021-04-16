@@ -45,7 +45,7 @@ public class Signup extends HttpServlet {
 		
 		if(username != null && password != null && password.equals(confirm) && password.length() >= 4 && 
 				firstName != null && lastName != null && birth != null && nationality != null && studyIn != null) {
-			HashMap<String, String> map = new HashMap<String, String>();
+			HashMap<String, Object> map = new HashMap<String, Object>();
 			map.put("username", username);
 			try {
 				if(Database.userDao.findOneBy(map) == null) {
