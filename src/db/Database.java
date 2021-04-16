@@ -20,7 +20,7 @@ public class Database {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e1) {
-			System.out.println("The jdbc driver could not be found, please ensure you coppied the mysql connector to your tomcat/lib directory!");
+			System.out.println("The jdbc driver could not be found!");
 			e1.printStackTrace();
 		}
         return (con = DriverManager.getConnection(jdbcUrl, user, pass));
