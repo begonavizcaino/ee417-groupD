@@ -24,50 +24,31 @@ try {
 	comments = post.getComments();// each getComments is a sql query, let's make only one
 	contents = post.getAttachedContent();
 } catch(Exception e) {
-	response.sendRedirect("./main.html");
+	response.sendRedirect("./main.jsp");
 	return;// stop the rest of the html from being sent alongside the redirect (faster + safer)
 }
 %>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>InterBlog - Post</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/common.css">
+	    <meta charset='utf-8'>
+	    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	    <title>ISB Post</title>
+	    <meta name='viewport' content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    <link rel='stylesheet' type='text/css' media='screen' href='css/singlepost.css'>
+	    <link rel='stylesheet' type='text/css' media='screen' href='css/flex-slider.css'>
+	    <link rel='stylesheet' type='text/css' media='screen' href='css/owl.css'>
+	    <link rel='stylesheet' type='text/css' media='screen' href='css/fontawesome.css'>
+	    <link rel='stylesheet' type='text/css' media='screen' href='css/landingpage.css'>
+	    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	    <script src="https://kit.fontawesome.com/60b74c23d5.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<!-- TODO: @Bing add header & post content, formatting etc here (from post1.html) -->
 <!-- ******************************************************************************************* -->
 	    <!-- Top Header Start -->
 	
-	    <div class="wrapper row0">
-	        <div id="topbar" class="hoc clear"> 
-	            <div class="fl_left">
-	                <ul>
-	                <li><i class="fa fa-phone"></i> +000 (00) 000 0000</li>
-	                <li><i class="fa fa-envelope-o"></i> info@internationalblog.com</li>
-	                </ul>
-	            </div>
-	            <div class="fl_right">
-	                <ul>
-	                <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
-	                <li><a href="signup.html">Login</a></li>
-	                <li><a href="signup.html">Sign-Up</a></li>
-	                <li id="searchform">
-	                    <div>
-	                      <form action="#" method="post">
-	                        <fieldset>
-	                          <legend>Quick Search:</legend>
-	                          <input type="text" placeholder="Enter search term&hellip;">
-	                          <button type="submit"><i class="fas fa-search"></i></button>
-	                        </fieldset>
-	                      </form>
-	                    </div>
-	                  </li>
-	                </ul>
-	            </div>
-	        </div>
-	    </div>
+	    
 	
 	    <!-- Top Header End -->
 <!-- ******************************************************************************************* -->
@@ -76,7 +57,7 @@ try {
 <!-- ******************************************************************************************* -->
     <!-- Blog Posts Start-->
 
-    <div class="wrapper  ">
+    <div class="wrapper">
         <div class="hoc container clear"> 
             <section class="blog-posts">
                 <div class="two_third first">  
@@ -241,69 +222,51 @@ try {
        
     	<!-- Post Comments End-->
     	
-    	<!-- @Bing add comment form (targeting /Comment), keeping only the message field, then footer -->
-    	<form id="comment" action="#" method="post">
-    		<input name="name" type="text" id="name" placeholder="Your name" required="">
-    		<input name="email" type="text" id="email" placeholder="Your email" required="">
-    		<input name="subject" type="text" id="subject" placeholder="Subject">
-    		<textarea name="message" rows="6" id="message" placeholder="Type your comment" required=""></textarea>
-    		<button type="submit" id="form-submit" class="main-button">Submit</button>
-      	</form>
-      	
-<!-- ******************************************************************************************* -->
-    <!-- Footer-> Main Footer Start -->
-
-    <div class="wrapper row4">
-        <footer id="footer" class="hoc clear"> 
-            <div class="one_third first">
-            <h6 class="heading">Reach out</h6>
-            <p>Getting in Touch is easy! Find us & follow us here</p>
-            <ul class="faico clear">
-              <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-              <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
-              <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-              <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a class="faicon-instagram" href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-          <div class="one_third ">
-            <h6 class="heading">Explore More</h6>
-            <ul class="nospace linklist">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="contactus.html">Contact Us</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
-          </div>
-          <div class="one_third">
-            <h6 class="heading">Our Newsletter</h6>
-            <p class="nospace btmspace-15">Enter your email address to follow this blog and receive notifications by email.</p>
-            <form method="post" action="#">
-              <fieldset>
-                <legend>Newsletter:</legend>
-                <input class="btmspace-15" type="text" value="" placeholder="Name">
-                <input class="btmspace-15" type="text" value="" placeholder="Email">
-                <button  type="submit" value="submit">Submit</button>
-              </fieldset>
-            </form>
-          </div>
-        </footer>
-      </div>
-
-    <!-- Footer-> Main Footer End -->
-<!-- ******************************************************************************************* -->
-
-<!-- ******************************************************************************************* -->
-    <!-- Footer-> Copy Right bar Start -->
-
-    <div class="wrapper row5">
-        <div id="copyright" class="hoc clear"> 
-            <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> - All Rights Reserved - <a href="#">InternationalBlog</a></p>
+    	<div class="wrapper row3 ">
+        <div class="hoc container clear"> 
+            <div class="group">
+                <section class="blog-posts">
+                    <div class="col-lg-12">
+                        <div class="sidebar-item submit-comment">
+                          <div class="sidebar-heading">
+                            <h2>Your comment</h2>
+                          </div>
+                          <div class="content">
+                            <form id="comment" action="#" method="post">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <fieldset>
+                                    <textarea name="message" rows="6" id="message" placeholder="Type your comment" required=""></textarea>
+                                  </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                  <fieldset>
+                                    <button type="submit" id="form-submit" class="main-button">Submit</button>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+      
+                </section>
+            </div>
         </div>
     </div>
 
-    <!-- Footer-> Copy Right bar End -->
-<!-- ******************************************************************************************* -->
+    <!-- Footer-> Main Footer Start -->
+
+    <%@ include file="footer.jsp" %>
+    
+    <script src="script/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="script/main.js" type="text/javascript"></script>
+
+    <script src="script/custom.js"></script>
+    <script src="script/owl.js"></script>
+    <script src="script/slick.js"></script>
+    <script src="script/isotope.js"></script>
+    <script src="script/accordions.js"></script>
 		
 	</body>
 </html>
