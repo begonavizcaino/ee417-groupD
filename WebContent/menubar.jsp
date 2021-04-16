@@ -59,6 +59,7 @@
                 </li>
                 <li><a href="main.jsp">Posts</a></li>
                 <li><a href="chat.jsp">Chat</a></li>
+                <li><a href="userprofile.jsp">User Profile</a></li>
                 <li><a href="aboutus.jsp">About Us</a></li>
                 <li><a href="ourteam.jsp">Our Team</a></li>
                 <li><a href="contactus.jsp">Contact Us</a></li>

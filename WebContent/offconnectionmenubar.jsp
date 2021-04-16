@@ -32,6 +32,34 @@
     </div>
 </div>
 
+<div class="bgded overlay"> 
+    <!-- Navigation/Logo bar Start -->
+    <div class="wrapper row1">
+        <header id="header" class="hoc clear"> 
+
+            <div id="logo" class="fl_left">
+                <h1><a href="index.jsp">International Blog</a></h1>
+            </div>
+            <!-- Main Navigation Menu with limited view to Home, About Us & Contact use -->
+            <nav id="mainav" class="fl_right">
+                <ul class="clear">
+                <li class="active"><a href="index.jsp">Home</a></li>
+                <li><a class="drop" href="#">Blogs</a>
+                    <ul>
+                    <li><a href="#">General</a></li>
+                    <li><a href="#">Academic</a></li>
+                    <li><a href="#">Student life</a></li>
+                    </ul>
+                </li>
+                <li><a href="main.jsp">Posts</a></li>
+                <li><a href="aboutus.jsp">About Us</a></li>
+                <li><a href="ourteam.jsp">Our Team</a></li>
+                <li><a href="contactus.jsp">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</div>
 <!-- Top Header End -->
 <!-- ******************************************************************************************* -->
 

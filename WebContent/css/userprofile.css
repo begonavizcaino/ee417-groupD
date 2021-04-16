@@ -1,0 +1,230 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(13deg 90% 59% / 53%);
+    padding-top: 10px;
+    overflow-x: hidden;
+    font-family:'Poppins', sans-serif;
+    margin: 0 100px;
+}
+
+.container{
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.profile-header
+{
+    background: hsla(12, 23%, 49%, 1);
+    width: 100%;
+    display: flex;
+    height: 190px;
+    position: relative;
+    box-shadow: 0px 3px 4px rgba(0,0,0,.2);
+}
+
+.profile-img
+{
+    float: left;
+    width: 340px;
+    height: 200px;
+}
+.profile-img img
+{
+    border-radius: 50%;
+    height: 230px;
+    width: 230px;
+    border: 4px solid #ffff;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    z-index: 5;
+    background: #ffff;
+}
+
+.profile-nav-info
+{
+    float: left;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 60px;
+}
+.profile-nav-info h3
+{
+    font-variant: small-caps;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.profile-nav-info .address
+{
+    display: flex;
+    font-weight: bold;
+    color: #777;
+}
+.profile-nav-info .address p
+{
+    margin-right: 5px;
+}
+.profile-option
+{
+    width: 40px;
+    height: 40px;
+    background: #ff6600;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    outline: none;
+}
+.profile-option .notifications i
+{
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: all .5s ease-in-out;
+}
+.profile-option:hover
+{
+    background: #ffffff;
+    border: 1px solid #ff6600;
+}
+.profile-option:hover .notifications i
+{
+    color: #ff6600;
+}
+
+.profile-option .notifications .alert-message
+{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ffffff;
+    color: #ff6600;
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.profile-body{
+	margin-left: 20px;
+}
+
+/*main body*/
+
+.main-bd
+{
+    width: 100%;
+    display: flex;
+    padding-right: 15px;
+}
+
+.profile-side
+{
+    width: 300px;
+    background: hsla(12, 23%, 49%, 1);
+    box-shadow: 0px 3px 5px rgba(0,0,0,.2);
+    padding: 90px 30px 20px;
+}
+
+
+
+
+
+
+
+ /* Media Queries --> Start
+------------------------------------------------------- */
+
+@-ms-viewport{width:device-width;}
+
+
+/* Media Queries  --> Max Wrapper Width - Laptop, Desktop etc.
+-------------------------------------------------------- */
+
+@media screen and (min-width:978px){
+	.hoc{max-width:978px;}
+}
+
+/* Media Queries  --> Mobile Devices
+------------------------------------------------------- */
+
+@media screen and (max-width:900px){
+	.hoc{max-width:90%;}
+
+	#topbar{}
+
+	#header{padding:30px 0;}
+	#header #logo{margin-top:3px;}
+
+
+/* Media Queries  --> Acreen Max 750px
+---------------------------------------------------------*/
+
+@media screen and (max-width:750px){
+	.flex-direction-nav .flex-prev, .flex-direction-nav .flex-next{display:none;}
+	.flex-control-nav{display:block;}
+
+	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
+	.fl_left, .fl_right{display:block; float:none;}
+	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
+
+	#topbar{text-align:center;}
+	#topbar ul{margin:0 0 15px 0;}
+	#topbar div:last-child ul{margin:0;}
+
+}
+
+/* Media Queries  --> Acreen Max 450px
+---------------------------------------------------- */
+
+@media screen and (max-width:450px){
+	#topbar ul li{margin-bottom:2px; padding-right:0; border-right:none;}
+
+	
+
+/* Media Queries  --> 
+--------------------------------------------------- */
+@media screen and (max-width:650px){
+	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
+	.scrollable table{margin:0; padding:0; white-space:nowrap;}
+
+	.inline li{display:block; margin-bottom:10px;}
+	.pushright li{margin-right:0;}
+
+	.font-x2{font-size:1.4rem;}
+	.font-x3{font-size:1.6rem;}
+
+}   
+
+ /* Media Queries --> End
+--------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
