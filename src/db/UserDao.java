@@ -12,7 +12,7 @@ public class UserDao extends DaoId<User> {
 	public void insert(User data) throws SQLException {
 		int i=1;
 		PreparedStatement st = Database.getDbConnection().prepareStatement("INSERT INTO " + tableName + 
-				" (username, password, role, picture, firstname, lastname, nationality, sudyin, birth) "
+				" (username, password, role, picture, firstname, lastname, nationality, studyin, birth) "
 				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		st.setString(i++, data.getUsername());
 		st.setString(i++, data.getPassword());
@@ -30,7 +30,7 @@ public class UserDao extends DaoId<User> {
 	public void update(User data) throws SQLException {
 		int i=1;
 		PreparedStatement st = Database.getDbConnection().prepareStatement("UPDATE " + tableName
-				+ " SET username = ?, password = ?, role = ?, picture = ?, firstname = ?, lastname = ?, nationality = ?, sudyin = ?, birth = ? "
+				+ " SET username = ?, password = ?, role = ?, picture = ?, firstname = ?, lastname = ?, nationality = ?, studyin = ?, birth = ? "
 				+ "WHERE id = ?");
 		st.setString(i++, data.getUsername());
 		st.setString(i++, data.getPassword());

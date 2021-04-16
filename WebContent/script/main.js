@@ -26,8 +26,10 @@ $(document).ready(function()
     // Form submit event, when user clicks the Sign-up button //
     form.addEventListener('submit', e =>
     {        
-        if(!checkInputs())
+        if(!checkInputs()) {
+        	console.log("prevents");
         	e.preventDefault(); // preventing submission to a server
+        }
     });
 
     function checkInputs() {
@@ -102,7 +104,7 @@ $(document).ready(function()
             setSuccessFor(studying);
         }
 
-        //show success message
+        return b;
     }
 
     function setErrorFor(input, message) {
