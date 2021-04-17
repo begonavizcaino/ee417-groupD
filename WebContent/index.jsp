@@ -17,16 +17,15 @@ if(u == null) {
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>ISB</title>
-    <script src="script/jquery-3.5.1.js" type="text/javascript"></script>
     <meta name='viewport' content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel='stylesheet' type='text/css' media='screen' href='css/landingpage.css'>
     <link rel="stylesheet" type="text/css" media='screen' href="css/menubar.css">
     <link rel='stylesheet' type='text/css' media='screen' href='css/flex-slider.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/owl.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/fontawesome.css'>
-    <script src='script/main.js'></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/60b74c23d5.js" crossorigin="anonymous"></script>
+    <script src="js/packages/jquery-3.6.0.min.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -190,9 +189,6 @@ if(u == null) {
 
 <!-- ******************************************************************************************* -->
     <!-- Java Script Start-->
-    <script src="/script/jquery-3.6.0.js" type="text/javascript"></script>
-    <script src="/script/main.js" type="text/javascript"></script>
-
 
     <!-- Java Script End -->
 <!-- ******************************************************************************************* -->

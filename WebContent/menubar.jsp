@@ -71,7 +71,7 @@
     
 	<div class="main-banner header-text">
             <div class="container-fluid">
-                <div class="owl-banner owl-carousel owl-loaded owl-drag">
+                <div class="owl-banner owl-carousel owl-loaded owl-drag slick">
                     <div class="item">
                         <img src="images/intro.jpg" style="filter: brightness(0.4)" alt="">
                         <div class="item-content">
@@ -121,7 +121,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="post1.jsp" style="filter: brightness(0.4)" alt="">
+                        <img src="images/intro.jpg" style="filter: brightness(0.4)" alt="">
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
@@ -176,14 +176,38 @@
 
 <!-- ******************************************************************************************* -->
     <!-- Java Script Start-->
-    <script src="script/jquery-3.6.0.js" type="text/javascript"></script>
-    <script src="script/main.js" type="text/javascript"></script>
+    <!-- <script src="script/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="script/main.js" type="text/javascript"></script> -->
+    <!-- <script src="js/packages/jquery-3.6.0.min.js"></script> -->
+    <script src="js/packages/owl.js"></script>
+    <script src="js/packages/isotope.js"></script>
+    <script src="js/packages/accordions.js"></script>
+    <script src="js/other/custom.js"></script>
 
-    <script src="script/custom.js"></script>
-    <script src="script/owl.js"></script>
-    <script src="script/slick.js"></script>
-    <script src="script/isotope.js"></script>
-    <script src="script/accordions.js"></script>
+    <script>
+        $(function(){
+            function triNext() {
+                return setInterval(() => {
+                    $(".owl-next").trigger("click")
+                }, 3000)
+            }
+
+            let handler = triNext()
+
+            $(".slick").mouseenter(() => {
+                if (handler) {
+                    clearInterval(handler)
+                    handler = null
+                }
+            })
+
+            $(".slick").mouseleave(() => {
+                if (!handler) {
+                    handler = triNext()
+                }
+            })
+        })
+    </script>
 
     <!-- Java Script End -->
 <!-- ******************************************************************************************* -->

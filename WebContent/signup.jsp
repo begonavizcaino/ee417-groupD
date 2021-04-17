@@ -4,12 +4,10 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>ISB SignUp</title>
-    <script src="script/jquery-3.5.1.js" type="text/javascript"></script>
     <meta name='viewport' content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel='stylesheet' type='text/css' media='screen' href='css/signup.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/menubar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/landingpage.css'>
-    <script src='script/main.js'></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/60b74c23d5.js" crossorigin="anonymous"></script>
 </head>
@@ -142,8 +140,8 @@
 
 <!-- ******************************************************************************************* -->
     <!-- Java Script Start-->
-    <script src="script/jquery-3.6.0.js" type="text/javascript"></script>
-    <script src="script/main.js" type="text/javascript"></script>
+    <script src="js/packages/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="js/sign/signUp.js" type="text/javascript"></script>
 
 
     <!-- Java Script End -->
