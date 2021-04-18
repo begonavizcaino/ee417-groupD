@@ -1,15 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="db.Role"%>
-<%@page import="db.User"%>
-<%@page import="utils.Utils"%>
-<% 
-User u = Utils.getUser(request);
-if(u == null) {
-	response.sendRedirect("./login.jsp");
-	return;// stop the rest of the html from being sent alongside the redirect (faster + safer)
-}
-%>
 
 <!DOCTYPE html>
 <html>
@@ -30,6 +20,118 @@ if(u == null) {
 <body>
 
 	<%@ include file="menubar.jsp" %>
+	
+	<!-- ******************************************************************************************* -->
+<!-- Top Background Image Wrapper -->
+
+	<div class="bgded overlay"> 
+    
+    <!-- Navigation/Logo bar End -->
+    
+	<div class="main-banner header-text">
+            <div class="container-fluid">
+                <div class="owl-banner owl-carousel owl-loaded owl-drag">
+                    <div class="item">
+                        <img src="images/intro.jpg" style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>Academic</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Student Support Stories</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/productivity.jpg"style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>College Life</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Staying Productive</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/intro3.jpg" style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>Campus</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Making most of your day</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/intro4.jpg" style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>Academic</span>
+                                </div>
+                                <a href="#"><h4>Student Support Stories</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/intro2.jpg"style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>College Life</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Staying Productive</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/intro3.jpg" style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>Campus</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Making most of your day</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<!-- End Top Background Image Wrapper -->
 	
 <!-- ******************************************************************************************* -->
     <!-- Blog Highlights Start -->
@@ -147,43 +249,6 @@ if(u == null) {
     </div>
 
   <!-- ******************************************************************************************* -->
-
-  <!-- ******************************************************************************************* -->
-      <!-- Upcomming Evnets Start-->
-
-
-    <div class="wrapper row3 ">
-        <div class="hoc container clear"> 
-            <div class="group">
-                <section class="">
-                    <h6 class="heading btmspace-50">Up Coming Event & Webinars</h6>
-                    <ul class="nospace">
-                        <li class="btmspace-30">
-                            <article>
-                            <h4 class="nospace"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
-                            <time  datetime="2021-07-07">7<sup>th</sup>Jul 2021</time>
-                            </article>
-                        </li>
-                        <li class="btmspace-30">
-                            <article>
-                            <h4 class="nospace"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
-                            <time  datetime="2021-07-07">7<sup>th</sup>Jul 2021</time>
-                            </article>
-                        </li>
-                        <li class="btmspace-30">
-                            <article>
-                            <h4 class="nospace"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
-                            <time  datetime="2021-07-07">7<sup>th</sup>Jul 2021</time>
-                            </article>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-    </div>
-       
-    <!-- Upcomming Evnets End-->
-<!-- ******************************************************************************************* -->
 
 	<%@ include file="footer.jsp" %>
 

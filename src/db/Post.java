@@ -64,8 +64,8 @@ public class Post extends TableRowId {
 	}
 	
 	public ArrayList<AttachedContent> getAttachedContent() throws SQLException {
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("post_id", getId() + "");
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("post_id", getId());
 		return Database.attachedContentDao.findBy(map);
 	}
 	
@@ -74,8 +74,8 @@ public class Post extends TableRowId {
 	}
 	
 	public ArrayList<Post> getComments() throws SQLException {
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("parent_id", getId() + "");
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("parent_id", getId());
 		return Database.postDao.findBy(map);
 	}
 	

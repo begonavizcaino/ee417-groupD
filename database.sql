@@ -4,6 +4,11 @@ CREATE TABLE users (
 	password VARCHAR(64) NOT NULL,
 	role ENUM('ADMIN','PUBLISHER','USER') NOT NULL DEFAULT 'USER',
 	picture TEXT NOT NULL,
+    firstname VARCHAR(32) NOT NULL,
+	lastname varchar(32) not null,
+	birth DATE not null,
+	nationality varchar(32) not null,
+	studyin varchar(32) not null,
 	PRIMARY KEY (id)
 );
 
