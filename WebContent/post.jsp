@@ -127,7 +127,7 @@ try {
 		                            			<img src=<%= comment.getUser().getPicture() %> alt="">  <!-- get the poster's photo -->
 		                            		</div>	
 		                            		<div class="right-content">
-		                            			<h4><%= comment.getUser().getFirstName() %> <%= comment.getUser().LastName() %><span><%= comment.getDate() %></span></h4> <!-- get the poster's name and post time -->
+		                            			<h4><%= comment.getUser().getFirstName() %> <%= comment.getUser().getLastName() %><span><%= comment.getDate() %></span></h4> <!-- get the poster's name and post time -->
 		                            			<p><%= comment.getMessage() %></p> 		<!-- get the poster's message -->
 		                            		</div>
 		                              	</li>

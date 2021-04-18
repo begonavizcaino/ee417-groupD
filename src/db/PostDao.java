@@ -51,4 +51,23 @@ public class PostDao extends DaoId<Post> {
 		return tableName;
 	}
 
+	public ArrayList<Post> findPosts(int category, int lastId, int count) throws SQLException {
+		ArrayList<Post> ret = new ArrayList<Post>();
+		PreparedStatement st = Database.getDbConnection().prepareStatement("select p.* from posts p " + 
+				"inner join posts p2 on p.parent_id = p2.id " + 
+				"where p.parent_id is not null and p2.parent_id is null and p.id < ? " + (category != -1 ? "and p.parent_id = ? " : "") + 
+				"order by p.id desc " + 
+				"limit ?");
+		int i = 1;
+		st.setInt(i++, lastId);
+		if(category != -1)
+			st.setInt(i++, category);
+		st.setInt(i++, count);
+		ResultSet rs = st.executeQuery();
+		while(rs.next()) {
+			ret.add(createNew(rs));
+		}
+		return ret;
+	}
+
 }
