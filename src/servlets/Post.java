@@ -57,7 +57,6 @@ public class Post extends HttpServlet {
 				post.put("date", p.getDate());
 				post.put("message", p.getMessage());
 				post.put("id", p.getId());
-				post.put("category", p.getParentId());
 				post.put("comments", p.getComments().size());
 				
 				JSONArray attachedContent = new JSONArray();
@@ -72,6 +71,12 @@ public class Post extends HttpServlet {
 				user.put("id", u.getId());
 				user.put("picture", u.getPicture());
 				post.put("user", user);
+				
+				JSONObject c = new JSONObject();
+				c.put("id", p.getParentId());
+				c.put("title", p.getParentPost().getTitle());
+				
+				post.put("category", c);
 				
 				arr.put(post);
 			}
