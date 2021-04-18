@@ -17,7 +17,7 @@ public class Utils {
 	public static User getUser(HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		if(session != null) {
-			HashMap<String, String> map = new HashMap<String, String>();
+			HashMap<String, Object> map = new HashMap<String, Object>();
 			map.put("username", (String)session.getAttribute("username"));
 			map.put("password", (String)session.getAttribute("password"));
 			try {

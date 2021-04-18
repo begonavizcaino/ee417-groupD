@@ -8,10 +8,10 @@ import java.util.Map;
 
 public abstract class Dao<T extends TableRow> {
 
-	public T findOneBy(Map<String, String> pairs) throws SQLException {
+	public T findOneBy(Map<String, Object> pairs) throws SQLException {
 		String sql = "SELECT * FROM " + getTableName();
 		int i = 0;
-		for (Map.Entry<String, String> pair : pairs.entrySet()) {
+		for (Map.Entry<String, Object> pair : pairs.entrySet()) {
 			if(i == 0) {
 				sql += " WHERE " + pair.getKey() + " = ?";
 				i++;
@@ -20,8 +20,13 @@ public abstract class Dao<T extends TableRow> {
 			}
 		}
 		PreparedStatement st = Database.getDbConnection().prepareStatement(sql);
-		for (Map.Entry<String, String> pair : pairs.entrySet()) {
-			st.setString(i++, pair.getValue());
+		for (Map.Entry<String, Object> pair : pairs.entrySet()) {
+			if(pair.getValue() instanceof Integer)
+				st.setInt(i++, (int)pair.getValue());
+			else if(pair.getValue() instanceof String)
+				st.setString(i++, (String)pair.getValue());
+			else
+				st.setObject(i++, pair.getValue());
 		}
 		ResultSet rs = st.executeQuery();
 		if(rs.next())
@@ -39,22 +44,26 @@ public abstract class Dao<T extends TableRow> {
 		return ret;
 	}
 
-	public ArrayList<T> findBy(Map<String, String> pairs) throws SQLException {
+	public ArrayList<T> findBy(Map<String, Object> pairs) throws SQLException {
 		ArrayList<T> ret = new ArrayList<T>();
 		String sql = "SELECT * FROM " + getTableName();
 		int i = 0;
-		for (int j = 0; j < pairs.size(); j++) {
+		for (Map.Entry<String, Object> pair : pairs.entrySet()) {
 			if(i == 0) {
-				sql += " WHERE ? = ?";
+				sql += " WHERE " + pair.getKey() + "= ?";
 				i++;
 			} else {
-				sql += " AND ? = ?";
+				sql += " AND " + pair.getKey() + "= ?";
 			}
 		}
 		PreparedStatement st = Database.getDbConnection().prepareStatement(sql);
-		for (Map.Entry<String, String> pair : pairs.entrySet()) {
-			st.setString(i++, pair.getKey());
-			st.setString(i++, pair.getValue());
+		for (Map.Entry<String, Object> pair : pairs.entrySet()) {
+			if(pair.getValue() instanceof Integer)
+				st.setInt(i++, (int)pair.getValue());
+			else if(pair.getValue() instanceof String)
+				st.setString(i++, (String)pair.getValue());
+			else
+				st.setObject(i++, pair.getValue());
 		}
 		ResultSet rs = st.executeQuery();
 		while(rs.next()) {
