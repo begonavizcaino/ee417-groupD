@@ -3,6 +3,7 @@ package db;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -12,12 +13,17 @@ public class PostDao extends DaoId<Post> {
 
 	@Override
 	public void insert(Post data) throws SQLException {
-		PreparedStatement st = Database.getDbConnection().prepareStatement("INSERT INTO " + tableName + " (parent_id, user_id, title, message) VALUES (?, ?, ?, ?)");
+		PreparedStatement st = Database.getDbConnection().prepareStatement("INSERT INTO " + tableName + " (parent_id, user_id, title, message) VALUES (?, ?, ?, ?)", 
+				Statement.RETURN_GENERATED_KEYS);
 		st.setInt(1, data.getParentId());
 		st.setInt(2, data.getUserId());
 		st.setString(3, data.getTitle());
 		st.setString(4, data.getMessage());
 		st.execute();
+		try (ResultSet keys = st.getGeneratedKeys()) {
+		    if(keys.next())
+		    	data.setId(keys.getInt(1));
+		}
 	}
 
 	@Override

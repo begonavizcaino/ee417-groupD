@@ -3,6 +3,7 @@ package db;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class AttachedContentDao extends DaoId<AttachedContent> {
 	
@@ -10,10 +11,15 @@ public class AttachedContentDao extends DaoId<AttachedContent> {
 
 	@Override
 	public void insert(AttachedContent data) throws SQLException {
-		PreparedStatement st = Database.getDbConnection().prepareStatement("INSERT INTO " + tableName + " (content, post_id) VALUES (?, ?)");
+		PreparedStatement st = Database.getDbConnection().prepareStatement("INSERT INTO " + tableName + " (content, post_id) VALUES (?, ?)", 
+				Statement.RETURN_GENERATED_KEYS);
 		st.setString(1, data.getContent());
 		st.setInt(2, data.getPostId());
 		st.execute();
+		try (ResultSet keys = st.getGeneratedKeys()) {
+		    if(keys.next())
+		    	data.setId(keys.getInt(1));
+		}
 	}
 
 	@Override

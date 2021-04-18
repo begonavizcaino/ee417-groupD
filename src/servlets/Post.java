@@ -3,12 +3,16 @@ package servlets;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Base64;
+import java.util.Collection;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -26,6 +30,7 @@ import utils.Utils;
  * Servlet implementation class Post
  */
 @WebServlet("/Post")
+@MultipartConfig
 public class Post extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -35,6 +40,7 @@ public class Post extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		if(!Utils.isUserConnected(request)) {
 			response.sendRedirect("main.jsp");
+			return;
 		}
 		int category = request.getParameter("category") != null ? Integer.parseInt(request.getParameter("category")) : -1;
 		int lastId = request.getParameter("last_id") != null ? Integer.parseInt(request.getParameter("last_id")) : Integer.MAX_VALUE;
@@ -81,6 +87,38 @@ public class Post extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		User u = Utils.getUser(request);
+		if(u == null) {
+			response.sendRedirect("main.jsp");
+			return;
+		}
+		int category = request.getParameter("category") != null ? Integer.parseInt(request.getParameter("category")) : -1;
+		String title = request.getParameter("title");
+		String message = request.getParameter("message");
+		if(category != -1 && title != null && message != null) {
+			db.Post p = new db.Post(u.getId(), category, title, message);
+			try {
+				Database.postDao.insert(p);
+				Collection<Part> parts = request.getParts();
+				for (Part part : parts) {
+					if(part.getName().equals("picture") && (part.getContentType().equals("image/png") || part.getContentType().equals("image/jpeg"))) {
+						byte[] bytes = new byte[10240];
+						part.getInputStream().read(bytes);
+						String encodedImage = Base64.getEncoder().encodeToString(bytes);
+						AttachedContent a = new AttachedContent(p.getId(), encodedImage);
+						Database.attachedContentDao.insert(a);
+					}
+				}
+			} catch (SQLException e) {
+				System.out.println("error");
+				e.printStackTrace();
+				request.setAttribute("error", "An error occured while accessing the database");
+				request.getRequestDispatcher("create_post.jsp").forward(request, response);
+				return;
+			}
+		}
+		response.sendRedirect("main.jsp");
+		
 	}
 
 }
