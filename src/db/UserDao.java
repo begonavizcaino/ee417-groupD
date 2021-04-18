@@ -3,6 +3,7 @@ package db;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class UserDao extends DaoId<User> {
 	
@@ -13,7 +14,8 @@ public class UserDao extends DaoId<User> {
 		int i=1;
 		PreparedStatement st = Database.getDbConnection().prepareStatement("INSERT INTO " + tableName + 
 				" (username, password, role, picture, firstname, lastname, nationality, studyin, birth) "
-				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", 
+				Statement.RETURN_GENERATED_KEYS);
 		st.setString(i++, data.getUsername());
 		st.setString(i++, data.getPassword());
 		st.setString(i++, data.getRole().toString());
@@ -24,6 +26,10 @@ public class UserDao extends DaoId<User> {
 		st.setString(i++, data.getStudyIn());
 		st.setDate(i++, data.getBirth());
 		st.execute();
+		try (ResultSet keys = st.getGeneratedKeys()) {
+		    if(keys.next())
+		    	data.setId(keys.getInt(1));
+		}
 	}
 
 	@Override

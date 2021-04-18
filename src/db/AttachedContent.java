@@ -14,8 +14,9 @@ public class AttachedContent extends TableRowId {
 		postId = rs.getInt("post_id");
 	}
 
-	public AttachedContent(String content) {
+	public AttachedContent(int postId, String content) {
 		super();
+		this.postId = postId;
 		this.content = content;
 	}
 
