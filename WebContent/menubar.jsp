@@ -4,8 +4,6 @@
 <%@page import="db.Role"%>
 <%@page import="db.User"%>
 <%@page import="utils.Utils"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <% 
 User menubaru = Utils.getUser(request);// get the user
 ArrayList<Post> categories = Database.postDao.findCategories();

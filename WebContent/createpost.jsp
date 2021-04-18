@@ -1,5 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="db.Post"%>
+<%@page import="db.Database"%>
+<%@page import="utils.Utils"%>
+<%@page import="db.User"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<% 
+User u = Utils.getUser(request);// get the user
+if(u == null) {
+	response.sendRedirect("./signup.jsp");
+	return;// stop the rest of the html from being sent alongside the redirect (faster + safer)
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -145,7 +156,7 @@
                             <h2>Start a post</h2>
                           </div>
                           <div class="content">
-                            <form id="post" action="#" method="post">
+                            <form id="post" action="Post" method="post" enctype="multipart/form-data">
                               <div class="row">
                                 <div class="col-md-6 col-sm-12">
                                   <fieldset>
@@ -154,12 +165,21 @@
                                 </div>
                                 <div class="col-md-12 col-sm-12">
                                   <fieldset>
-                                    <input name="subject" type="text" id="subject" placeholder="Subject">
+                                    <select name="category">
+										<% for(Post category : Database.postDao.findCategories()) { %>
+											<option value="<%= category.getId() %>"><%= category.getTitle() %></option>
+										<% } %>
+									</select>
                                   </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                   <fieldset>
                                     <textarea name="message" rows="5" id="message" placeholder="Type Here" required=""></textarea>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                  <fieldset>
+                                    <input type="file" name="picture" accept="image/png, image/jpeg" multiple>
                                   </fieldset>
                                 </div>
                                 <div class="col-lg-12">
