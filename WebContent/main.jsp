@@ -32,10 +32,10 @@ if(!Utils.isUserConnected(request)) {
                 <div class="two_third first">  
                     <div class="col-lg-8">
                         <div class="all-blog-posts">
-                            <div class="row">
+                            <div class="row post-contents">
 
                                 <!-- Post #1 -------------------------------------------------->
-                                <div class="col-lg-12">
+                                <!-- <div class="col-lg-12">
                                     <div class="blog-post">
                                         <div class="blog-thumb">
                                             <img src="images/intro.jpg" alt="">
@@ -74,9 +74,9 @@ if(!Utils.isUserConnected(request)) {
                                         </div>
                                     </div>
                                 </div>
-                                
+                                 -->
                                 <!-- Post #2 -------------------------------------------------->
-                                <div class="col-lg-12">
+                                <!-- <div class="col-lg-12">
                                     <div class="blog-post">
                                         <div class="blog-thumb">
                                             <img src="images/productivity.jpg" alt="">
@@ -115,10 +115,10 @@ if(!Utils.isUserConnected(request)) {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- Post #3 -------------------------------------------------->
-                                <div class="col-lg-12">
+                                <!-- <div class="col-lg-12">
                                     <div class="blog-post">
                                         <div class="blog-thumb">
                                             <img src="images/campus.jpg" alt="">
@@ -157,15 +157,15 @@ if(!Utils.isUserConnected(request)) {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- All Posts Link -------------------------------------------------->
-                                <div class="col-lg-12">
-                                    <div class="main-button">
-                                        <a href="#">View All Posts</a>
-                                    </div>
-                                </div>
 
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="main-button">
+                                    <a href="#">View All Posts</a>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -93,20 +93,9 @@ if(u == null) {
 <%@ include file="footer.jsp" %>
 
 <!-- ******************************************************************************************* -->
-    <!-- Java Script Start-->
-    <script src="script/jquery-3.6.0.js" type="text/javascript"></script>
-    <script src="script/main.js" type="text/javascript"></script>
-
-    <script src="script/custom.js"></script>
-    <script src="script/owl.js"></script>
-    <script src="script/slick.js"></script>
-    <script src="script/isotope.js"></script>
-    <script src="script/accordions.js"></script>
-
-
-
-
-    <!-- Java Script End -->
+  <!-- Java Script Start-->
+  <script src="js/post/createPost.js"></script>
+  <!-- Java Script End -->
 <!-- ******************************************************************************************* -->
 
     

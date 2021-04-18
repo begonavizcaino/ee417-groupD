@@ -1,3 +1,9 @@
+/**
+ *  message menubar
+ *  @author jiahuan
+ *  @date 21/04/17
+ */
+
 $(function(){
     function triNext() {
         return setInterval(() => {
@@ -7,6 +13,7 @@ $(function(){
 
     let handler = triNext()
 
+    // don't scroll automatically when hover prev or next btn 
     $(".owl-prev").mouseenter(() => {
         if (handler) {
             clearInterval(handler)
@@ -32,9 +39,9 @@ $(function(){
     })
 
 
-    // hide banner when enter signup page
+    // hide banner when enter signup or login page
     const param = getQueryVariable("mode")
-    if (param == "signup") {
+    if (param == "signup" || param == "login") {
         $(".main-banner").hide()
     } else {
         $(".main-banner").show()

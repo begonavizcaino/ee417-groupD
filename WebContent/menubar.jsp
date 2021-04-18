@@ -22,7 +22,7 @@ ArrayList<Post> categories = Database.postDao.findCategories();
             <ul>
             <li><a href="index.jsp"><i class="fa fa-lg fa-home"></i></a></li>
             <% if(menubaru == null) { %>
-	            <li><a href="signup.jsp">Login</a></li>
+	            <li><a href="signup.jsp?mode=login">Login</a></li>
 	            <li><a href="signup.jsp?mode=signup">Sign-Up</a></li>
             <% } else { %>
             	<li><a href="profile.jsp">Profile</a></li>
