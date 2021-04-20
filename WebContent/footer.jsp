@@ -9,9 +9,9 @@
             <p>Getting in Touch is easy! Find us & follow us here</p>
             <ul class="faico clear">
               <li><a class="faicon-facebook" href="https://www.facebook.com/interBlog417/"><i class="fab fa-facebook"></i></a></li>
-              <li><a class="faicon-linkedin" href="https://www.instagram.com/interblog417/"><i class="fab fa-linkedin"></i></a></li>
+              <li><a class="faicon-linkedin" href="https://www.linkedin.com/in/international-blog"><i class="fab fa-linkedin"></i></a></li>
               <li><a class="faicon-twitter" href="https://twitter.com/interna48111070"><i class="fab fa-twitter"></i></a></li>
-              <li><a class="faicon-instagram" href="https://www.linkedin.com/in/international-blog"><i class="fab fa-instagram"></i></a></li>
+              <li><a class="faicon-instagram" href= "https://www.instagram.com/interblog417/"><i class="fab fa-instagram"></i></a></li>
             </ul>
           </div>
           <div class="one_third ">
