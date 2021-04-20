@@ -5,9 +5,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sidebar-item search">
-                        <form id="search_form" name="gs" method="GET" action="#">
-                            <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
-                        </form>
+                        <!-- <form id="search_form" name="gs" method="GET" action="#"> -->
+                        <input id="search_by_title" type="text" name="q" class="searchText" placeholder="type title to search..." autocomplete="on">
+                        <!-- </form> -->
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -16,19 +16,7 @@
                             <h2>Recent Posts</h2>
                         </div>
                         <div class="content">
-                            <ul>
-                                <li><a href="post.jsp?postid=2">
-                                    <h5>Student Support Stories</h5>
-                                    <span>April 18, 2021</span>
-                                </a></li>
-                                <li><a href="post.jsp?postid=2">
-                                    <h5>Staying Productive</h5>
-                                    <span>April 18, 2021</span>
-                                </a></li>
-                                <li><a href="post.jsp?postid=2">
-                                    <h5>Making Most of yourday</h5>
-                                    <span>April 18, 2021</span>
-                                </a></li>
+                            <ul class="siderbar-content-ul">
                             </ul>
                         </div>
                     </div>
