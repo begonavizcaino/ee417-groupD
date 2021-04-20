@@ -61,14 +61,14 @@ ArrayList<Post> categories = Database.postDao.findCategories();
 	                <ul class="clear">
 	                <li class="active"><a href="index.jsp">Home</a></li>
 	                <% if(menubaru != null) { %>
-		                <li><a class="drop" href="main.jsp">Blogs</a>
+		                <li><a class="drop" href="main.jsp">Posts</a>
 		                    <ul>
 		                    <% for(Post c : categories) { %>
-		                    	<li><a href="posts.jsp?category=<%= c.getId() %>"><%= c.getTitle() %></a></li>
+		                    	<li><a href="main.jsp?category=<%= c.getId() %>"><%= c.getTitle() %></a></li>
                 			<% } %>
 		                    </ul>
 		                </li>
-		                <li><a href="main.jsp">Posts</a></li>
+		                <!-- <li><a href="main.jsp">Posts</a></li> -->
 		                <li><a href="chat.jsp">Chat</a></li>
 	                <%
 	                } 
