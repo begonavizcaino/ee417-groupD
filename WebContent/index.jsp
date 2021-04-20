@@ -181,7 +181,7 @@
         <section class="hoc container clear s-testimonials" > 
             <div class="sectiontitle center">
                 <h3 class="heading">Testimonials</h3>
-                <p> What internationla Student are saying</p>
+                <p> What international students are saying</p>
             </div>
             <div class=" one_quarter first testimonial">
                 <div class="testimonial-author">

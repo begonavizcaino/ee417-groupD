@@ -15,7 +15,7 @@ ArrayList<Post> categories = Database.postDao.findCategories();
         <div class="fl_left">
             <ul>
             <li><i class="fa fa-phone"></i> +000 (00) 000 0000</li>
-            <li><i class="fa fa-envelope-o"></i> info@internationalblog.com</li>
+            <li><i class="fa fa-envelope-o"></i> interblog417@gmail.com</li>
             </ul>
         </div>
         <div class="fl_right">
@@ -25,7 +25,7 @@ ArrayList<Post> categories = Database.postDao.findCategories();
 	            <li><a href="signup.jsp">Login</a></li>
 	            <li><a href="signup.jsp?mode=signup">Sign-Up</a></li>
             <% } else { %>
-            	<li><a href="profile.jsp">Profile</a></li>
+            	<li><a href="userprofile.jsp">Profile</a></li>
             	<li><a href="Disconnect">Disconnect</a></li>
             <% } %>
             <li id="searchform">
