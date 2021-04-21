@@ -45,7 +45,7 @@
 					<li><a href="https://www.facebook.com/interBlog417/"><img src="images/1.png"></a></li>
 					<li><a href="https://twitter.com/interna48111070"><img src="images/2.png"></a></li>
 					<li><a href="https://www.instagram.com/interblog417/"><img src="images/3.png"></a></li>
-					<li><a href="https://www.linkedin.com/in/international-blog"w><img src="images/5.png"></a></li>
+					<li><a href="https://www.linkedin.com/in/international-blog"><img src="images/5.png"></a></li>
 				</ul>
 			</div>
 			<div class="contactForm">
