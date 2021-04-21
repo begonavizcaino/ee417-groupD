@@ -1,15 +1,20 @@
 package db;
 
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 
 public class Post extends TableRowId {
 	private int userId;
 	private int parentId;
 	private String title;
 	private String message;
+	private Timestamp date;
 	
 	public Post(ResultSet rs) throws SQLException {
 		super(rs);
@@ -17,6 +22,7 @@ public class Post extends TableRowId {
 		parentId = rs.getInt("parent_id");
 		title = rs.getString("title");
 		message = rs.getString("message");
+		date = rs.getTimestamp("date");
 	}
 	
 	public Post(int userId, int parentId, String title, String message) {
@@ -60,7 +66,7 @@ public class Post extends TableRowId {
 	}
 	
 	public String getDate() {
-		return "not implemented";// TODO: add date
+		return new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH).format(date);
 	}
 	
 	public ArrayList<AttachedContent> getAttachedContent() throws SQLException {

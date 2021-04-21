@@ -20,6 +20,7 @@ CREATE TABLE posts (
     message TEXT NOT NULL,
     parent_id INT NULL,
     user_id INT NOT NULL,
+    date DATETIME DEFAULT NOW(),
     PRIMARY KEY (id),
     FOREIGN KEY (parent_id) REFERENCES posts(id),
     FOREIGN KEY (user_id) REFERENCES users(id)

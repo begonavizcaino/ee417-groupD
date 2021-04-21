@@ -22,7 +22,7 @@
                             	<% for(Post p : Database.postDao.findPosts(-1, Integer.MAX_VALUE, 3)) { %>
                             		<li><a href="post.jsp?postid=<%= p.getId() %>">
                                     <h5><%= p.getTitle() %></h5>
-                                    <span>April 18, 2021</span>
+                                    <span><%= p.getDate() %></span>
                                 </a></li>
                             	<% } %>
                             </ul>

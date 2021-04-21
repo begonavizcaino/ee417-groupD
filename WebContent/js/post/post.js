@@ -28,7 +28,7 @@ function showMessage(data) {
             <a href="post.jsp?postid=${data.id}"><h4>${data.title}</h4></a>
             <ul class="post-info">
                 <li>Admin</li>
-                <li>April 18th, 2021</li>
+                <li>${data.date}</li>
                 <li>${data.comments} Comments</li>
             </ul>
             <p>${data.content}
@@ -59,7 +59,8 @@ function loadMessages(count, ctg, sucCallback, failCallback) {
                         img: res.posts[i].attachedContent[0],
                         title: res.posts[i].title,
                         content: res.posts[i].message,
-                        comments: res.posts[i].comments
+                        comments: res.posts[i].comments,
+                        date: res.posts[i].date,
                     }
                     showMessage(data)
                     message_map.set(data.title, data)
