@@ -12,6 +12,8 @@ public class Database {
 	public static UserDao userDao = new UserDao();
 	public static PostDao postDao = new PostDao();
 	public static AttachedContentDao attachedContentDao = new AttachedContentDao();
+	public static ConversationDao conversationDao = new ConversationDao();
+	public static ConvMessageDao convMessageDao = new ConvMessageDao();
 	
 	private static Connection con = null;
 	

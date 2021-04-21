@@ -27,22 +27,12 @@ function showMessage(data) {
             <span>Academic</span>
             <a href="post.jsp?postid=${data.id}"><h4>${data.title}</h4></a>
             <ul class="post-info">
-                <li><a href="#">Admin</a></li>
-                <li><a href="#">April 18th, 2021</a></li>
-                <li><a href="#">${data.comments} Comments</a></li>
+                <li>Admin</li>
+                <li>April 18th, 2021</li>
+                <li>${data.comments} Comments</li>
             </ul>
             <p>${data.content}
             </p>
-            <div class="post-options">
-                <div class="row">
-                    <div class="col-6">
-                        <ul class="post-tags">
-                            <li><i class="fa fa-tags"></i></li>
-                            <li><a href="#">Academic</a>,</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>`
@@ -65,7 +55,8 @@ function loadMessages(count, ctg, sucCallback, failCallback) {
                 lastId = res.lastId
                 for (let i = 0; i < res.posts.length; i++) {
                     const data = {
-                        img: "data:image/jpeg;base64," + res.posts[i].attachedContent[0],
+                    	id: res.posts[i].id,
+                        img: res.posts[i].attachedContent[0],
                         title: res.posts[i].title,
                         content: res.posts[i].message,
                         comments: res.posts[i].comments
@@ -155,12 +146,12 @@ function _fuzzyQuery(list, keyword) {
 }
 
 function init() {
-    loadMessages(COUNT_PER_PAGE, -1, (posts) => {
+    loadMessages(COUNT_PER_PAGE, -1/*, (posts) => {
         // show siderbar with latest data of count_per_page
         for (let i = 0; i < posts.length; i++) {
             showSidebarConetent(posts[i])
-        }
-    })   
+        }// moved this part to server side to be consistent on all pages
+    }*/)   
     addViewAllBtnListener()
     addSearchListener()
 }

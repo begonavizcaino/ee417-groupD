@@ -116,7 +116,7 @@ public class Post extends HttpServlet {
 				        while ((length = in.read(buffer, 0, 1024)) != -1) {
 				            outByte.write(buffer,0,length);
 				        }
-				        String encodedImage = Base64.getEncoder().encodeToString(outByte.toByteArray());
+				        String encodedImage = "data:" + part.getContentType() + ";base64, " + Base64.getEncoder().encodeToString(outByte.toByteArray());
 //						byte[] bytes = new byte[10240];
 //						part.getInputStream().read(bytes);
 //						String encodedImage = Base64.getEncoder().encodeToString(bytes);

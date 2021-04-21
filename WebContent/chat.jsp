@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<%@page import="db.ConvMessage"%>
+<%@page import="db.Conversation"%>
+<%
+User u = Utils.getUser(request);
+if(u == null) {
+	response.sendRedirect("login.jsp");
+	return;
+}
+%>
 <html>
 <head>
 	<meta charset="uts-8">
@@ -27,34 +36,27 @@
         <!--We can make as many conversation we want be it as to be done dynamicaly-->
         <!--Here is just the form of what it could be like-->
         <div id="conversation-list">
-            <div class="conversation active">
-                <!--A photo could be placed here-->
-                <img src="images/trashLogo.png" alt="testimg"/>
-                <div class="title-text">
-                    Conversation1
-                </div>
-                <!--The creation date could be here-->
-                <div class="created-date">
-                    Apr 5
-                </div>
-                <div class="conversation-message">
-                    This is a message
-                </div>
-            </div>
-            <div class="conversation">
-                <!--A photo could be placed here-->
-                <img src="images/attachmentLogo.png" alt="testimg"/>
-                <div class="title-text">
-                    Conversation2
-                </div>
-                <!--The creation date could be here-->
-                <div class="created-date">
-                    2 days ago
-                </div>
-                <div class="conversation-message">
-                    This is another message
-                </div>
-            </div>
+        	<%
+        		for(Conversation c : Database.conversationDao.findAll()) {
+        	%>
+        		<div class="conversation">
+	                <!--A photo could be placed here-->
+	                <!-- <img src="images/trashLogo.png" alt="testimg"/> -->
+	                <div class="title-text">
+	                    <%= c.getTitle() %>
+	                </div>
+	                <!--The creation date could be here-->
+	                <!--<div class="created-date">
+	                    Apr 5
+	                </div>-->
+	                <div class="conversation-message">
+	                    <% 
+	                    	ConvMessage m = c.getLastMessage();
+	                    	out.print(m == null ? "" : m.getMessage());
+	                    %>
+	                </div>
+	            </div>
+        	<% } %>
         </div>
         <div id="new-message-container">
             <a href="#">+</a>
@@ -88,5 +90,30 @@
     </div>
     
     <%@ include file="footer.jsp" %>
+    
+    <script>
+    // Placeholder code, to be fixed and integrated :)
+    var loc = window.location, new_uri;
+    if (loc.protocol === "https:") {
+        new_uri = "wss:";
+    } else {
+        new_uri = "ws:";
+    }
+    new_uri += "//" + loc.host;
+    new_uri += loc.pathname + "/../Chat";
+    var ws = new WebSocket(new_uri);
+    ws.addEventListener('open', function (event) {
+    	ws.send('startup');
+    	/*setTimeout(() => {
+    		ws.send('message;1;This  message has been sent by the socket');
+    	}, 1000);*/
+    });
+
+    // Listen for messages
+    ws.addEventListener('message', function (event) {
+        console.log('Message from server ', event.data);
+    });
+    
+    </script>
     
 </body>

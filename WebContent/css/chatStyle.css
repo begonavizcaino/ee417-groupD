@@ -7,13 +7,13 @@
         / 275px 1fr;
     min-width: 800px;
     min-height: 800px;
-    width: 95%;
+    width: 100%;
     height: 90vh;
-    margin: 40px 20px 20px 20px;
-    padding-top:20px;
+    /*margin: 40px 20px 20px 20px;
+    padding-top:20px;*/
     background: #FFF;
-    border-radius: 10px;
-    border:1px solid #eee;
+    /*border-radius: 10px;
+    border:1px solid #eee;*/
 }
 
 #search-container,
@@ -27,7 +27,7 @@
     align-items: center;
     padding: 0 20px;
     grid-area: search-container;
-    border-radius: 10px 0 0 0;
+    /*border-radius: 10px 0 0 0;*/
     box-shadow: 0 1px 3;
     z-index: 1;
     border-bottom: 1px solid #002C88;
@@ -41,11 +41,12 @@
     height: 30px;
     border: 0;
     padding-left: 48px;
-    padding-right: 20px;
+    /*padding-right: 20px;*/
     font-size: 1.1em;
     background: url("../images/searchLogo.png") no-repeat rgba(255, 255, 255,0.3);
     background-position: 15px center;
     background-size: 20px 20px;
+    width: 100%;
 }
 
 #search-container input::placeholder {
@@ -60,10 +61,10 @@
 
 .conversation {
     display: grid;
-    grid-template-columns: 40px 1fr max-content;
-    grid-gap: 10px;
+    /*grid-template-columns: 40px 1fr max-content;
+    grid-gap: 10px;*/
     color: #ddd;
-    font-size: 1.3em;
+    /*font-size: 1.3em;*/
     border-bottom: 1px solid #002C88;
     padding: 20px 20px 20px 15px;
 }
@@ -78,14 +79,14 @@
 }
 
 .conversation > img {
-    grid-row: span 2;
+    /*grid-row: span 2;*/
     height: 40px;
     border-radius: 100%;
 }
 
 .title-text {
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #eee;
     padding-left: 5px;
     white-space: nowrap;
@@ -99,7 +100,8 @@
 }
 
 .conversation-message {
-    grid-column: span 2;
+	text-align: right;
+    /*grid-column: span 2;*/
     padding-left: 5px;
     white-space: nowrap;
     font-size: 1em;
@@ -113,7 +115,7 @@
     align-content: center;
     grid-area: new-message-container;
     border-top: 1px solid rgba(0,0,0,0.75);
-    border-radius: 0 0 0 10px;
+    /*border-radius: 0 0 0 10px;*/
     padding: 0 15px;
 }
 
@@ -141,7 +143,7 @@
     color: orange;
     font-weight: bold;
     font-size: 2.0em;
-    border-radius: 0 10px 0 0;
+    /*border-radius: 0 10px 0 0;*/
     box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
     padding: 0 20px;
 }

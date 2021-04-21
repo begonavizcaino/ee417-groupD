@@ -114,4 +114,8 @@ public class User extends TableRowId {
 	public void setBirth(Date birth) {
 		this.birth = birth;
 	}
+
+	public String getName() {
+		return firstName + " " + lastName;
+	}
 }

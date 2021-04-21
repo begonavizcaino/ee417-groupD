@@ -52,18 +52,7 @@ CREATE TABLE convmessage (
     FOREIGN KEY (conv_id) REFERENCES conversation(id)
 );
 
-CREATE TABLE convuser (
-	user_id INT NOT NULL,
-    conv_id INT NOT NULL,
-    state ENUM('APPROVED', 'REQUEST', 'INVITED'),
-    PRIMARY KEY(user_id, conv_id),
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (conv_id) REFERENCES conversation(id)
-);
-
 INSERT INTO conversation (title, image) VALUES ('Test conv', '');
-
-INSERT INTO convuser (user_id, conv_id, state) VALUES (1, 1, 'APPROVED'), (2, 1, 'APPROVED');
 
 INSERT INTO convmessage (user_id, conv_id, message) VALUES (1, 1, 'Hello'), (2, 1, 'Hey');
 
