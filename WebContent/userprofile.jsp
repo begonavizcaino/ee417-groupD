@@ -12,7 +12,7 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='css/flex-slider.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/owl.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/fontawesome.css'>
-	<script src="script/jquery-3.6.0.js" type="text/javascript"></script>
+	<script src="js/packages/jquery-3.6.0.min.js" type="text/javascript"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='css/landingpage.css'>
     <link rel="stylesheet" type="text/css" href="css/userprofile.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -105,7 +105,7 @@
 		</div>
 	</div>
 
-<script src='script/profile.js'></script>
+<script src='js/profile/profile.js'></script>
 
 
 <%@ include file="footer.jsp" %>	
