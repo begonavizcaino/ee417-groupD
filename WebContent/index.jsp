@@ -41,7 +41,7 @@
                     <li class="one_third">
                         <article>
                         <div>
-                            <h6 class="heading">International Studnent </h6>
+                            <h6 class="heading">International Student </h6>
                         </div>
                         <img src="images/campus.jpg" alt="">
                         <footer><a href="post1.jsp">More Details</a></footer>
@@ -69,7 +69,7 @@
         <section class="hoc container clear s-testimonials" > 
             <div class="sectiontitle center">
                 <h3 class="heading">Testimonials</h3>
-                <p> What internationla Student are saying</p>
+                <p> What international students are saying</p>
             </div>
             <div class=" one_quarter first testimonial">
                 <div class="testimonial-author">
