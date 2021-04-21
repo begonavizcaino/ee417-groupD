@@ -253,90 +253,127 @@ button.createbtn i
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
- /* Media Queries --> Start
-------------------------------------------------------- */
-
-@-ms-viewport{width:device-width;}
-
-
-/* Media Queries  --> Max Wrapper Width - Laptop, Desktop etc.
--------------------------------------------------------- */
-
-@media screen and (min-width:978px){
-	.hoc{max-width:978px;}
+#see-more-bio,
+#see-less-bio
+{
+    color: blue;
+    cursor: pointer;
+    text-transform: lowercase;
 }
 
-/* Media Queries  --> Mobile Devices
-------------------------------------------------------- */
+/*-------------Media Query --> Desktop,Laptop --> Max 1100px---------------*/
 
-@media screen and (max-width:900px){
-	.hoc{max-width:90%;}
+@media(max-width: 1100px)
+{
+    .profile-side
+    {
+        width: 250px;
+        padding: 90px 15px 20px;
+    }
+    .profile-img img
+    {
+        height: 200px;
+        width: 200px;
+        left: 50px;
+        top: 50px;
+    }
+}
 
-	#topbar{}
+/*-------------Media Query --> Max 900px---------------*/
 
-	#header{padding:30px 0;}
-	#header #logo{margin-top:3px;}
+@media(max-width: 900px)
+{
+    body
+    {
+        margin: 0 20px;
+    }
+    .profile-header
+    {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .profile-img
+    {
+        float: left;
+        width: 100%;
+        height: 200px;
+    }
+    .profile-img img
+    {
+        position: relative;
+        left: 0;
+    }
+    .profile-nav-info
+    {
+        text-align: center;
+    }
+    .profile-nav-info .address
+    {
+        justify-content: center;
+    }
+    .profile-option
+    {
+        right: 20px;
+        top: 75%;
+        transform: translateY(50%);
+    }
+    .main-bd
+    {
+        flex-direction: column;
+        padding-right: 0px;
+    }
+    .profile-side
+    {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        margin: 5px 0;
+    }
+    .user-rating
+    {
+        justify-content: center;
+    }
 
-
-/* Media Queries  --> Acreen Max 750px
----------------------------------------------------------*/
-
-@media screen and (max-width:750px){
-	.flex-direction-nav .flex-prev, .flex-direction-nav .flex-next{display:none;}
-	.flex-control-nav{display:block;}
-
-	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
-	.fl_left, .fl_right{display:block; float:none;}
-	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
-
-	#topbar{text-align:center;}
-	#topbar ul{margin:0 0 15px 0;}
-	#topbar div:last-child ul{margin:0;}
 
 }
 
-/* Media Queries  --> Acreen Max 450px
----------------------------------------------------- */
+/*-------------Media Query --> Phone,Tabs --> Max 400px---------------*/
 
-@media screen and (max-width:450px){
-	#topbar ul li{margin-bottom:2px; padding-right:0; border-right:none;}
-
-	
-
-/* Media Queries  --> 
---------------------------------------------------- */
-@media screen and (max-width:650px){
-	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
-	.scrollable table{margin:0; padding:0; white-space:nowrap;}
-
-	.inline li{display:block; margin-bottom:10px;}
-	.pushright li{margin-right:0;}
-
-	.font-x2{font-size:1.4rem;}
-	.font-x3{font-size:1.6rem;}
-
-}   
-
- /* Media Queries --> End
---------------------------------------------------------------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
+@media(max-width: 400px)
+{
+    body
+    {
+        margin: 5px;
+    }
+    .profile-header h3
+    {
+        font-size: 1.7rem;
+    }
+    .profile-header p,
+    .profile-header span
+    {
+        font-size: .9rem;
+    }
+    .profile-option
+    {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 15px;
+        top: 83%;
+    }
+    .profile-option .notification .alert-message
+    {
+        top: -3px;
+        right: -4px;
+        padding: 4px;
+        height: 15px;
+        width: 15px;
+        font-size: .7rem;
+    }
+}
 
 
