@@ -8,6 +8,10 @@ const COUNT_PER_PAGE = 3
 
 const LOAD_INTERVAL_TIME = 100
 
+const MAX_REQUEST_TIMES = 20
+
+const MAX_PREVIEW_CONTENT_LENGTH = 350
+
 let lastId = null
 
 let message_map = new Map()
@@ -27,9 +31,9 @@ function showMessage(data) {
             <span>Academic</span>
             <a href="post.jsp?postid=${data.id}"><h4>${data.title}</h4></a>
             <ul class="post-info">
-                <li>Admin</li>
-                <li>${data.date}</li>
-                <li>${data.comments} Comments</li>
+                <li><a href="">${data.user.name}</a></li>
+                <li><a href="">${data.date}</a></li>
+                <li><a href="post.jsp?postid=${data.id}">${data.comments} Comments</a></li>
             </ul>
             <p>${data.content}
             </p>
@@ -55,12 +59,15 @@ function loadMessages(count, ctg, sucCallback, failCallback) {
                 lastId = res.lastId
                 for (let i = 0; i < res.posts.length; i++) {
                     const data = {
-                    	id: res.posts[i].id,
-                        img: res.posts[i].attachedContent[0],
+                        id: res.posts[i].id,
+                        img: res.posts[i].attachedContent[0] ? "data:image/jpeg;base64," + res.posts[i].attachedContent[0] : "",
                         title: res.posts[i].title,
-                        content: res.posts[i].message,
+                        content: res.posts[i].message.length > MAX_PREVIEW_CONTENT_LENGTH ?
+                                    res.posts[i].message.substring(0, MAX_PREVIEW_CONTENT_LENGTH) + "..." : res.posts[i].message,
                         comments: res.posts[i].comments,
                         date: res.posts[i].date,
+                        user: res.posts[i].user,
+                        category: res.posts[i].category.title// use the id to make a link to the category's page?
                     }
                     showMessage(data)
                     message_map.set(data.title, data)
@@ -85,14 +92,25 @@ function addViewAllBtnListener() {
         isClickViewAll = true
         $(".main-button").hide()
 
-        // load single page data every specific time
-        const handler = setInterval(() => {
+        let cur_request_times = 0
+
+        function recursiveLoading() {
             loadMessages(COUNT_PER_PAGE, -1, (posts) => {
-                if (!posts || posts.length <= 0) {
-                    clearInterval(handler)
+                // prevent server-side err
+                cur_request_times++
+                if (cur_request_times >= MAX_REQUEST_TIMES) {
+                    return
+                }
+                if (posts.length > 0) {
+                    setTimeout(() => {
+                        recursiveLoading()
+                    }, LOAD_INTERVAL_TIME)
                 }
             })
-        }, LOAD_INTERVAL_TIME);
+        }
+
+        // load single page data every specific time
+        recursiveLoading()
     })
 }
 
@@ -100,7 +118,7 @@ function showSidebarConetent(data) {
     const str = `
     <li><a href="post.jsp?postid=${data.id}">
         <h5>${data.title}</h5>
-        <span>April 18, 2021</span>
+        <span>${data.date}</span>
     </a></li>
     `
     $(".siderbar-content-ul").append(str)
@@ -132,6 +150,10 @@ function addSearchListener() {
     });
 }
 
+function addCategoryListener() {
+    // todo
+}
+
 function _fuzzyQuery(list, keyword) {
     if (keyword == "") {
         return []
@@ -155,6 +177,7 @@ function init() {
     }*/)   
     addViewAllBtnListener()
     addSearchListener()
+    addCategoryListener()
 }
 
 $(function() {

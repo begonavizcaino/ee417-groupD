@@ -75,6 +75,11 @@ public class Post extends TableRowId {
 		return Database.attachedContentDao.findBy(map);
 	}
 	
+	public String getFirstAttachedContent() throws SQLException {
+		ArrayList<AttachedContent> arr = this.getAttachedContent();
+		return "data:image/jpeg;base64," + arr.get(0).getContent();
+	}
+	
 	public Post getParentPost() throws SQLException {
 		return parentId >= 0 ? Database.postDao.findOneById(parentId) : null;
 	}
