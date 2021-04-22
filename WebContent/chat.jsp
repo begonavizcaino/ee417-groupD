@@ -67,9 +67,10 @@ if(u == null) {
         </div>
         <div id="chat-message-list">
             
-            <div class="message-row other-message">
+            <!-- <div class="message-row other-message">
                 <div class="message-content">
                     <img src="images/trashLogo.png" alt="testimg" width="24px" height="24px"/>
+                    <p>user1</p>
                     <div class="message-text">Tchao I tried something but it des not have a really 
                         sense I am juste writing some bullshit in order to see if it goes well 
                         when I have a big message </div>
@@ -78,42 +79,20 @@ if(u == null) {
             </div>
             <div class="message-row your-message">
                 <div class="message-content">
+                    <p>user2</p>
                     <div class="message-text">Ok then</div>
                     <div class="message-time">Apr 5</div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div id="chat-form">
             <img src="images/attachmentLogo.png" alt="Add Attachment" width="32px" height="32px">
-            <input type="text" placeholder="Type a message"/>
+            <input id="chat-input" type="text" placeholder="Type a message"/>
         </div>
     </div>
     
     <%@ include file="footer.jsp" %>
-    
-    <script>
-    // Placeholder code, to be fixed and integrated :)
-    var loc = window.location, new_uri;
-    if (loc.protocol === "https:") {
-        new_uri = "wss:";
-    } else {
-        new_uri = "ws:";
-    }
-    new_uri += "//" + loc.host;
-    new_uri += loc.pathname + "/../Chat";
-    var ws = new WebSocket(new_uri);
-    ws.addEventListener('open', function (event) {
-    	ws.send('startup');
-    	/*setTimeout(() => {
-    		ws.send('message;1;This  message has been sent by the socket');
-    	}, 1000);*/
-    });
 
-    // Listen for messages
-    ws.addEventListener('message', function (event) {
-        console.log('Message from server ', event.data);
-    });
-    
-    </script>
+    <script src="js/chat/chat.js"></script>
     
 </body>

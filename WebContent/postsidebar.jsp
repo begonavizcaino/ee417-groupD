@@ -37,7 +37,7 @@
                         <div class="content">
                             <ul>
                             	<% for(Post p : Database.postDao.findCategories()) { 
-                            		out.println("<li><a href=main.jsp?category=" + p.getId() + ">- " + p.getTitle() + "</a></li>");
+                            		out.println("<li class=\"categories-li\"><a href=main.jsp?category=" + p.getId() + ">- " + p.getTitle() + "</a></li>");
                             	} %>
                             </ul>
                         </div>

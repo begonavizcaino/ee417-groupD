@@ -47,7 +47,7 @@ public class Chat  {
 	@OnMessage
 	public void onMessage(String message, Session session) throws DeploymentException, IOException {
 		Basic basicRemote = session.getBasicRemote();
-		basicRemote.sendText("received");
+		basicRemote.sendText("received;" + user.getName());
 		try {
 			if(message.equals("startup")) {
 				for(Conversation c : Database.conversationDao.findAll()) {
@@ -55,7 +55,7 @@ public class Chat  {
 					Collections.reverse(lastMessages);
 					for(ConvMessage m : lastMessages) {
 						basicRemote.sendText("message;" + c.getId() + ";" + m.getUser().getName() + ";" + m.getMessage());
-						System.out.println(m.getId());
+//						System.out.println(m.getId());
 					}
 				}
 			} else if(message.startsWith("message;")) {
@@ -71,7 +71,10 @@ public class Chat  {
 					return;
 				}
 				for(Basic b : remotes) {
+					System.out.println(b);
+					System.out.println(basicRemote);
 					if(b != basicRemote)
+						System.out.println("sent");
 						b.sendText("message;" + messageParts[1] + ";" + user.getName() + ";" + messageParts[2]);
 				}
 				ConvMessage m = new ConvMessage(messageParts[2], user.getId(), convId);

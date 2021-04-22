@@ -37,6 +37,16 @@ function showMessage(data) {
             </ul>
             <p>${data.content}
             </p>
+            <div class="post-options">
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="post-tags">
+                            <li><i class="fa fa-tags"></i></li>
+                            <li>${data.category}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>`
@@ -86,42 +96,35 @@ function loadMessages(count, ctg, sucCallback, failCallback) {
     })
 }
 
+function loadAllMessages(ctg) {
+    let cur_request_times = 0
+
+    function recursiveLoading() {
+        loadMessages(COUNT_PER_PAGE, ctg, (posts) => {
+            // prevent server-side err
+            cur_request_times++
+            if (cur_request_times >= MAX_REQUEST_TIMES) {
+                return
+            }
+            if (posts.length > 0) {
+                setTimeout(() => {
+                    recursiveLoading()
+                }, LOAD_INTERVAL_TIME)
+            }
+        })
+    }
+
+    // load single page data every specific time
+    recursiveLoading()
+}
+
 function addViewAllBtnListener() {
-    $(".main-button").show()
     $("#view_all_btn").click(function() {
         isClickViewAll = true
         $(".main-button").hide()
 
-        let cur_request_times = 0
-
-        function recursiveLoading() {
-            loadMessages(COUNT_PER_PAGE, -1, (posts) => {
-                // prevent server-side err
-                cur_request_times++
-                if (cur_request_times >= MAX_REQUEST_TIMES) {
-                    return
-                }
-                if (posts.length > 0) {
-                    setTimeout(() => {
-                        recursiveLoading()
-                    }, LOAD_INTERVAL_TIME)
-                }
-            })
-        }
-
-        // load single page data every specific time
-        recursiveLoading()
+        loadAllMessages(-1)
     })
-}
-
-function showSidebarConetent(data) {
-    const str = `
-    <li><a href="post.jsp?postid=${data.id}">
-        <h5>${data.title}</h5>
-        <span>${data.date}</span>
-    </a></li>
-    `
-    $(".siderbar-content-ul").append(str)
 }
 
 function addSearchListener() {
@@ -150,10 +153,6 @@ function addSearchListener() {
     });
 }
 
-function addCategoryListener() {
-    // todo
-}
-
 function _fuzzyQuery(list, keyword) {
     if (keyword == "") {
         return []
@@ -168,16 +167,26 @@ function _fuzzyQuery(list, keyword) {
     return arr
 }
 
+function _getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+}
+
 function init() {
-    loadMessages(COUNT_PER_PAGE, -1/*, (posts) => {
-        // show siderbar with latest data of count_per_page
-        for (let i = 0; i < posts.length; i++) {
-            showSidebarConetent(posts[i])
-        }// moved this part to server side to be consistent on all pages
-    }*/)   
+    const category = _getQueryVariable("category")
+    if (category) {
+        $(".main-button").css('visibility','hidden')
+        loadAllMessages(category)
+    } else {
+        loadMessages(COUNT_PER_PAGE, -1)   
+    }
     addViewAllBtnListener()
     addSearchListener()
-    addCategoryListener()
 }
 
 $(function() {

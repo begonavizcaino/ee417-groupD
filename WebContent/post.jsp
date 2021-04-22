@@ -86,13 +86,6 @@ try {
                                                             <li><a href="#">Academic</a>,</li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <ul class="post-share">
-                                                            <li><i class="fa fa-share-alt"></i></li>
-                                                            <li><a href="#">Facebook</a>,</li>
-                                                            <li><a href="#"> Twitter</a></li>
-                                                        </ul>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

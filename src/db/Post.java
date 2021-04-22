@@ -77,7 +77,11 @@ public class Post extends TableRowId {
 	
 	public String getFirstAttachedContent() throws SQLException {
 		ArrayList<AttachedContent> arr = this.getAttachedContent();
-		return "data:image/jpeg;base64," + arr.get(0).getContent();
+		if (arr.size() > 0) {
+			return "data:image/jpeg;base64," + arr.get(0).getContent();
+		} else {
+			return "";
+		}
 	}
 	
 	public Post getParentPost() throws SQLException {
