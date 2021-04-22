@@ -59,11 +59,9 @@ if(u == null) {
         	<% } %>
         </div>
         <div id="new-message-container">
-            <a href="#">+</a>
         </div>
         <div id="chat-title">
             <span>Conversation1_TEST</span>
-            <img src="images/trashLogo.png" alt="Delete Conversation" width="36px" height="36px">
         </div>
         <div id="chat-message-list">
             
@@ -86,7 +84,7 @@ if(u == null) {
             </div> -->
         </div>
         <div id="chat-form">
-            <img src="images/attachmentLogo.png" alt="Add Attachment" width="32px" height="32px">
+            <img src="images/send.png" alt="Send message" width="32px" height="32px">
             <input id="chat-input" type="text" placeholder="Type a message"/>
         </div>
     </div>
