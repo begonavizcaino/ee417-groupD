@@ -84,7 +84,7 @@ if(u == null) {
             </div> -->
         </div>
         <div id="chat-form">
-            <img src="images/send.png" alt="Send message" width="32px" height="32px">
+            <img src="images/attachmentLogo.png" alt="Add Attachment" width="32px" height="32px">
             <input id="chat-input" type="text" placeholder="Type a message"/>
         </div>
     </div>
