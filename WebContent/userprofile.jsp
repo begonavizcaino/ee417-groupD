@@ -44,12 +44,6 @@ if(u == null) {
 					<span class="country">Ireland</span>
 				</div>
 			</div>
-			<div class="profile-option">
-				<div class="notifications">
-					<i class="fa fa-bell"></i>
-					<span class="alert-message">1</span>
-				</div>
-			</div>
 		</div>
 		<div class="main-bd">
 			<div class="left-side">
@@ -61,9 +55,6 @@ if(u == null) {
 						<p class="bio">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, quo dolore harum dolorum amet error quae provident dolor. Accusantium ducimus sapiente iure est corporis magni consequuntur deleniti corrupti quos maiores.</p>
 					</div>
 					<div class="profile-btn">
-						<button class="chatbtn">
-							<i class="fa fa-comment"></i>Chat
-						</button>
 						<button class="createbtn" onclick="location.href='createpost.jsp'" type="button" >
 							<i class="fa fa-plus"></i>Create post
 						</button>
