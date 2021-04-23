@@ -60,21 +60,6 @@ if(u == null) {
 							<i class="fa fa-plus"></i>Create post
 						</button>
 					</div>
-					<div class="user-rating">
-						<h3 class="rating">4.5</h3>
-						<div class="rate">
-							<div class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-							</div>
-							<span class="no-user"><span>123</span>&nbsp;
-							&nbsp;
-							reviews</span>
-						</div>
-					</div>
 
 				</div>
 			</div>
@@ -82,8 +67,7 @@ if(u == null) {
 				<div class="nav">
 					<ul>
 						<li onclick="tabs(0)" class="user-post active">Posts</li>
-						<li onclick="tabs(1)" class="user-review">Reviews</li>
-						<li onclick="tabs(2)" class="user-setting">Settings</li>
+						<li onclick="tabs(1)" class="user-setting">Settings</li>
 					</ul>
 				</div>
 				<div class="profile-body">
@@ -123,10 +107,6 @@ if(u == null) {
 							    </div>
 							</div>
 						<% } %>
-					</div>
-					<div class="profile-review tab">
-						<h1>User Reviews</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Accusamus id cupiditate libero eius dolore, inrem nulla reiciendis. Qui, vero voluptatum! Quia iusto accusamus corporis, illo, ullam quibusdam maiores assumenda explicabo illum eligendi odit fugiat a, laborum rerum architecto eum ut distincto. Rrror quos temporibus at ecpedita? Optio amet aliqum provident voluptatum minima quidem nemo harum doloremque. Est nihil quisquam quis deserunt repellat, natus, saepe laborum. Ipsum officils, nisi optio.</p>
 					</div>
 					<div class="profile-setting tab">
 						<h1>Account Settings</h1>
