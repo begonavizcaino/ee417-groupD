@@ -18,6 +18,7 @@ public class User extends TableRowId {
 	private String nationality;
 	private String studyIn;
 	private Date birth;
+	private String bio;
 	
 	public User(ResultSet rs) throws SQLException {
 		super(rs);
@@ -30,10 +31,11 @@ public class User extends TableRowId {
 		nationality = rs.getString("nationality");
 		studyIn = rs.getString("studyin");
 		birth = rs.getDate("birth");
+		bio = rs.getString("bio");
 	}
 
 	public User(String username, String password, Role role, String picture, String firstName, String lastName,
-			String nationality, String studyIn, Date birth) {
+			String nationality, String studyIn, Date birth, String bio) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -44,6 +46,7 @@ public class User extends TableRowId {
 		this.nationality = nationality;
 		this.studyIn = studyIn;
 		this.birth = birth;
+		this.bio = bio;
 	}
 
 	public String getUsername() {
@@ -116,6 +119,14 @@ public class User extends TableRowId {
 
 	public void setBirth(Date birth) {
 		this.birth = birth;
+	}
+
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		this.bio = bio;
 	}
 
 	public String getName() {
