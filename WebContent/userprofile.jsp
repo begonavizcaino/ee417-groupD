@@ -4,7 +4,7 @@
 <%
 User u = Utils.getUser(request);
 if(u == null) {
-	response.sendRedirect("login.jsp");
+	response.sendRedirect("signup.jsp");
 	return;
 }
 %>
@@ -110,21 +110,24 @@ if(u == null) {
 					</div>
 					<div class="profile-setting tab">
 						<h1>Account Settings</h1>
-						<form action="/action_page.php">
+						<form action="UpdateProfile" method="post" enctype="multipart/form-data">
   							<label for="username">First name:</label><br>
-  							<input type="text" id="username" name="firstname" placeholder="First Name"><br>
+  							<input type="text" id="username" name="firstname" placeholder="First Name" value="<%= u.getFirstName() %>"><br>
   							<label for="username2">Last name:</label><br>
-  							<input type="text" id="username2" name="lastname" placeholder="Last Name"><br>
-  							<label for="email">Email:</label><br>
-  							<input type="email" id="email" name="email" placeholder="Email"><br>
+  							<input type="text" id="username2" name="lastname" placeholder="Last Name" value="<%= u.getLastName() %>"><br>
   							<label for="password">Password:</label><br>
-  							<input type="password" id="password" name="password" placeholder="Password" value=""><br>
+  							<input type="password" id="password" name="password" placeholder="Password" value="<%= u.getPassword() %>"><br>
+  							<label for="confirm">Confirm password:</label><br>
+  							<input type="password" id="confirm" name="confirm" placeholder="Confirm password" value="<%= u.getPassword() %>"><br>
   							<label for="lname">Date of birth:</label><br>
-  							<input type="date" id="date" name="birth"><br>
+  							<input type="date" id="date" name="birth" value="<%= u.getBirth() %>"><br>
   							<label for="bio">Bio:</label><br>
   							<textarea name="bio"></textarea><br>
   							<label for="fileToUpload">Profile image</label>
-  							<input type="file" name="fileToUpload" id="fileToUpload"><br>
+  							<input type="file" name="picture" id="fileToUpload"><br>
+	                        <% if(request.getAttribute("error") != null) { %>
+	                        	<p class="error"><%= request.getAttribute("error") %></p>
+	                        <% } %>
   							
   							
   							<input type="submit" value="Submit">

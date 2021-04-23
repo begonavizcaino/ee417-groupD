@@ -3,11 +3,13 @@ package servlets;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.Base64;
 import java.util.Collection;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +25,7 @@ import utils.Utils;
  * Servlet implementation class UpdateProfile
  */
 @WebServlet("/UpdateProfile")
+@MultipartConfig
 public class UpdateProfile extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	/**
@@ -34,9 +37,21 @@ public class UpdateProfile extends HttpServlet {
 			response.sendRedirect("main.jsp");
 			return;
 		}
+		String firstName = request.getParameter("firstname");
+		String lastName = request.getParameter("lastname");
+		String password = request.getParameter("password");
+		String confirm = request.getParameter("confirm");
+		String b = request.getParameter("birth");
+		Date birth = b != null ? Date.valueOf(b) : u.getBirth();
 		String bio = request.getParameter("bio");
-		if(bio != null) {
+		System.out.println(firstName + lastName + password);
+		if(bio != null && password != null && password.equals(confirm) && password.length() >= 4 && 
+				firstName != null && lastName != null && birth != null) {
 			u.setBio(bio);
+			u.setFirstName(firstName);
+			u.setLastName(lastName);
+			u.setPassword(password);
+			u.setBirth(birth);
 			try {
 				Collection<Part> parts = request.getParts();
 				for (Part part : parts) {
@@ -64,6 +79,9 @@ public class UpdateProfile extends HttpServlet {
 				request.getRequestDispatcher("userprofile.jsp").forward(request, response);
 			}
 			response.sendRedirect("userprofile.jsp");
+		} else {
+			request.setAttribute("error", "Invalid parameters!");
+			request.getRequestDispatcher("userprofile.jsp").forward(request, response);
 		}
 	}
 
