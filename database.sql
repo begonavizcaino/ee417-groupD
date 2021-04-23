@@ -9,6 +9,7 @@ CREATE TABLE users (
 	birth DATE not null,
 	nationality varchar(32) not null,
 	studyin varchar(32) not null,
+    bio text,
 	PRIMARY KEY (id)
 );
 

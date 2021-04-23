@@ -53,7 +53,7 @@ if(u == null) {
 					<div class="user-details"><strong><%= u.getStudyIn() %></strong></div>
 					<div class="user-bio">
 						<h3>Bio</h3>
-						<p class="bio">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, quo dolore harum dolorum amet error quae provident dolor. Accusantium ducimus sapiente iure est corporis magni consequuntur deleniti corrupti quos maiores.</p>
+						<p class="bio"><%= u.getBio() == null || u.getBio().equals("") ? "This user has no Bio" : u.getBio() %></p>
 					</div>
 					<div class="profile-btn">
 						<button class="createbtn" onclick="location.href='createpost.jsp'" type="button" >
