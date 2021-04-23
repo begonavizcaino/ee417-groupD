@@ -20,7 +20,8 @@ function drawBar(ctx, upperLeftCornerX, upperLeftCornerY, width, height,color){
     ctx.fillRect(upperLeftCornerX,upperLeftCornerY,width,height);
     ctx.restore();
 }
- 
+
+// TODO fetch those infos from the html page
 var categories = {
     "Dublin": 10,
     "Student life": 5,

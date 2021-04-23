@@ -1,3 +1,4 @@
+<%@page import="db.AttachedContent"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -35,21 +36,21 @@ if(u == null) {
 <div class="container">
 		<div class="profile-header">
 			<div class="profile-img">
-				<img src="images/dp.jpg" width="200" alt="">
+				<img src="<%= (u.getPicture() != null && !u.getPicture().equals("")) ? u.getPicture() : "images/dp.jpg" %>" width="200" alt="">
 			</div>
 			<div class="profile-nav-info">
-				<h3 class="user-name">XYZ</h3>
+				<h3 class="user-name"><%= u.getName() %></h3>
 				<div class="address">
-					<p class="city">Dublin,</p>
-					<span class="country">Ireland</span>
+					<!-- <p class="city">Dublin,</p> -->
+					<span class="country"><%= u.getNationality() %></span>
 				</div>
 			</div>
 		</div>
 		<div class="main-bd">
 			<div class="left-side">
 				<div class="profile-side">
-					<p class="user-mail"><i class="fa fa-envelope-o"> xyz@gmail.com</i></p>
-					<div class="user-details"><strong>Currently studing in : Ireland</strong></div>
+					<p class="user-mail"><i class="fa fa-envelope-o"> <%= u.getUsername() %></i></p>
+					<div class="user-details"><strong><%= u.getStudyIn() %></strong></div>
 					<div class="user-bio">
 						<h3>Bio</h3>
 						<p class="bio">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, quo dolore harum dolorum amet error quae provident dolor. Accusantium ducimus sapiente iure est corporis magni consequuntur deleniti corrupti quos maiores.</p>
@@ -88,7 +89,40 @@ if(u == null) {
 				<div class="profile-body">
 					<div class="profile-posts tab">
 						<h1>Your Posts</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Doleres iure quae sint magni cupiditate non, quod velit similique ducimus! Impedit dicta, sit officiis recum. Adipisci ut facere atque nsotrum odit dolorum ea cumque modi. Asperiores dolorum ,iure odit ad, tempore magnam beatae deleniti doluta quisquam assumenda pariatur incidunt sapiete eaque modi earum. Ab ducimus accusamus recusandae, odio iusto commodi fuga, repellat inventore iure aut libero consequatur sequi nesciunt dolorem ipsam.</p>
+						<% for(Post p : u.getPosts()) { 
+							ArrayList<AttachedContent> ac = p.getAttachedContent();
+						%>
+							<div class="col-lg-12">
+							    <div class="blog-post">
+							    	<% if(ac.size() > 0) { %>
+								        <div class="blog-thumb">
+								            <img src="<%= ac.get(0).getContent()  %>" alt="">
+							        	</div>
+									<% } %>
+							        <div class="down-content">
+							            <span>Academic</span>
+							            <a href="post.jsp?postid=<%= p.getId() %>"><h4><%= p.getTitle() %></h4></a>
+							            <ul class="post-info">
+							                <li><a href=""><%= u.getName() %></a></li>
+							                <li><a href=""><%= p.getDate() %></a></li>
+							                <li><a href="post.jsp?postid=<%= p.getId() %>"><%= p.getComments().size() %> Comments</a></li>
+							            </ul>
+							            <p><%= p.getMessage() %>
+							            </p>
+							            <div class="post-options">
+							                <div class="row">
+							                    <div class="col-6">
+							                        <ul class="post-tags">
+							                            <li><i class="fa fa-tags"></i></li>
+							                            <li><%= p.getParentPost().getTitle() %></li>
+							                        </ul>
+							                    </div>
+							                </div>
+							            </div>
+							        </div>
+							    </div>
+							</div>
+						<% } %>
 					</div>
 					<div class="profile-review tab">
 						<h1>User Reviews</h1>

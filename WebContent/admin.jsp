@@ -1,11 +1,15 @@
 <%@page import="db.*"%>
 <%@page import="utils.Utils"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <% 
 User u = Utils.getUser(request);
 if(u == null || u.getRole() != Role.ADMIN) {
 	response.sendRedirect("./index.jsp");
 	return;// stop the rest of the html from being sent alongside the redirect (faster + safer)
 }
+//ArrayList<Post> categories = Database.postDao.findCategories();// categories loaded by the menubar
+ArrayList<Post> posts = Database.postDao.findPosts(-1, Integer.MAX_VALUE, 999);
 %>
 <!DOCTYPE html>
 <html>
@@ -47,7 +51,7 @@ if(u == null || u.getRole() != Role.ADMIN) {
       <div class="w3-container w3-grey w3-text-white w3-padding-16">
         <div class="w3-left"><i class="fa fa-comment w3-xxlarge"></i></div>
         <div class="w3-right">
-          <h3>52</h3>
+          <h3><%= categories.size() %></h3>
         </div>
         <div class="w3-clear"></div>
         <h4>Categories</h4>
@@ -67,7 +71,7 @@ if(u == null || u.getRole() != Role.ADMIN) {
       <div class="w3-container w3-grey w3-text-white w3-padding-16">
         <div class="w3-left"><i class="fa fa-laptop w3-xxlarge"></i></div>
         <div class="w3-right">
-          <h3>23</h3>
+          <h3><%= posts.size() %></h3>
         </div>
         <div class="w3-clear"></div>
         <h4>Posts</h4>
@@ -77,13 +81,17 @@ if(u == null || u.getRole() != Role.ADMIN) {
       <div class="w3-container w3-brown w3-text-white w3-padding-16">
         <div class="w3-left"><i class="fa fa-users w3-xxlarge"></i></div>
         <div class="w3-right">
-          <h3>50</h3>
+          <h3><%= Database.userDao.findAll().size() %></h3>
         </div>
         <div class="w3-clear"></div>
         <h4>Users</h4>
       </div>
     </div>
   </div>
+  
+   	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+			url="<%= Database.jdbcUrl %>"
+			user="<%= Database.user %>" password="<%= Database.pass %>" />
 
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">
@@ -94,48 +102,14 @@ if(u == null || u.getRole() != Role.ADMIN) {
       <div class="w3-twothird">
         <h5>Last posts</h5>
         <table class="w3-table w3-striped w3-white">
-          <tr>
-            <td><i class="fa fa-laptop w3-text-dark-grey w3-large"></i></td>
-            <td>Post 1</td>
-            <td>Date</td>
-            <td>Author</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-laptop w3-text-dark-grey w3-large"></i></td>
-            <td>Post 2</td>
-            <td>Date</td>
-            <td>Author</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-laptop w3-text-dark-grey w3-large"></i></td>
-            <td>Post 3</td>
-            <td>Date</td>
-            <td>Author</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-laptop w3-text-dark-grey w3-large"></i></td>
-            <td>Post 4</td>
-            <td><i>Date</i></td>
-            <td>Author</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-laptop w3-text-dark-grey w3-large"></i></td>
-            <td>Post 5</td>
-            <td>Date</td>
-            <td>Author</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-laptop w3-text-dark-grey w3-large"></i></td>
-            <td>Post 6</td>
-            <td>Date</td>
-            <td>Author</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-laptop w3-text-dark-grey w3-large"></i></td>
-            <td>Post 7</td>
-            <td>Date</td>
-            <td>Author</td>
-          </tr>
+        	<% for(Post p : posts) { %>
+       			<tr>
+		            <td><i class="fa fa-laptop w3-text-dark-grey w3-large"></i></td>
+		            <td><%= p.getTitle() %></td>
+		            <td><%= p.getDate() %></td>
+		            <td><%= p.getUser().getName() %></td>
+      			</tr>
+        	<% } %>
         </table>
       </div>
     </div>
@@ -145,30 +119,15 @@ if(u == null || u.getRole() != Role.ADMIN) {
   <div class="w3-container">
     <h5>Countries</h5>
     <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-      <tr>
-        <td>Ireland</td>
-        <td>65%</td>
-      </tr>
-      <tr>
-        <td>UK</td>
-        <td>15.7%</td>
-      </tr>
-      <tr>
-        <td>France</td>
-        <td>5.6%</td>
-      </tr>
-      <tr>
-        <td>Spain</td>
-        <td>2.1%</td>
-      </tr>
-      <tr>
-        <td>India</td>
-        <td>1.9%</td>
-      </tr>
-      <tr>
-        <td>China</td>
-        <td>1.5%</td>
-      </tr>
+		<sql:query dataSource="${snapshot}" var="result">
+				SELECT nationality, concat(left(100 * count(*) / (select count(*) from users), 2), "%") as count FROM users GROUP BY nationality</sql:query>
+				
+		<c:forEach var="row" items="${result.rows}">
+			<tr>
+				<td><c:out value="${row.nationality}" /></td>
+				<td><c:out value="${row.count}" /></td>
+			</tr>
+		</c:forEach>
     </table><br>
     <button class="w3-button w3-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button>
   </div>
@@ -177,23 +136,21 @@ if(u == null || u.getRole() != Role.ADMIN) {
   <div class="w3-container">
     <h5>Recent Users</h5>
     <ul class="w3-ul w3-card-4 w3-white">
-      <li class="w3-padding-16">
-        <img src="/w3images/avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Mike</span><br>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Jill</span><br>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Jane</span><br>
-      </li>
+		<sql:query dataSource="${snapshot}" var="result">
+				select u.username, concat(u.firstname, " ", u.lastname) as name, u.picture, p.date from posts p
+				inner join users u on p.user_id = u.id
+				order by date desc limit 3;</sql:query>
+		<c:forEach var="row" items="${result.rows}">
+			<li class="w3-padding-16">
+		        <img src="${row.picture}" class="w3-left w3-circle w3-margin-right" style="width:35px">
+		        <span class="w3-xlarge">${row.name}<small> - ${row.username}</small></span><br>
+		      </li>
+		</c:forEach>
     </ul>
   </div>
   <hr>
 
-  <div class="w3-container">
+  <!-- <div class="w3-container">
     <h5>Recent Comments</h5>
     <div class="w3-row">
       <div class="w3-col m2 text-center">
@@ -215,7 +172,7 @@ if(u == null || u.getRole() != Role.ADMIN) {
       </div>
     </div>
   </div>
-  <br>
+  <br> -->
   
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">
@@ -226,22 +183,12 @@ if(u == null || u.getRole() != Role.ADMIN) {
 	    	<th><b>Category</b></th>
 	    	<th><b>Number of posts</b></th>
 	  	  </tr>
-	      <tr>
-	        <td>Dublin</td>
-	        <td>10</td>
-	      </tr>
-	      <tr>
-	        <td>Student life</td>
-	        <td>5</td>
-	      </tr>
-	      <tr>
-	        <td>Recommendations</td>
-	        <td>7</td>
-	      </tr>
-	      <tr>
-	        <td>Academic resources</td>
-	        <td>2</td>
-	      </tr>
+		    <% for(Post c : categories) { %>
+           		<tr>
+			        <td><%= c.getTitle() %></td>
+			        <td><%= c.getComments().size() %></td>
+      			</tr>
+	    	<% } %>
 	    </table><br>
 	    <button class="w3-button w3-dark-grey">Add new category</i></button>
 	  </div>

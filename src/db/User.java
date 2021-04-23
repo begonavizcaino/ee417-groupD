@@ -1,8 +1,11 @@
 package db;
 
 import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User extends TableRowId {
 
@@ -117,5 +120,19 @@ public class User extends TableRowId {
 
 	public String getName() {
 		return firstName + " " + lastName;
+	}
+	
+	public ArrayList<Post> getPosts() throws SQLException {
+		ArrayList<Post> ret = new ArrayList<Post>();
+		PreparedStatement st = Database.getDbConnection().prepareStatement("select p.* from posts p " + 
+				"inner join posts p2 on p.parent_id = p2.id " + 
+				"where p.parent_id is not null and p2.parent_id is null and p.user_id = ? " + 
+				"order by p.id desc ");
+		st.setInt(1, getId());
+		ResultSet rs = st.executeQuery();
+		while(rs.next()) {
+			ret.add(new Post(rs));
+		}
+		return ret;
 	}
 }
