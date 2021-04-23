@@ -110,6 +110,7 @@ if(u == null) {
 					</div>
 					<div class="profile-setting tab">
 						<h1>Account Settings</h1>
+						<div class="form">
 						<form action="UpdateProfile" method="post" enctype="multipart/form-data">
   							<label for="username">First name:</label><br>
   							<input type="text" id="username" name="firstname" placeholder="First Name" value="<%= u.getFirstName() %>"><br>
@@ -122,7 +123,7 @@ if(u == null) {
   							<label for="lname">Date of birth:</label><br>
   							<input type="date" id="date" name="birth" value="<%= u.getBirth() %>"><br>
   							<label for="bio">Bio:</label><br>
-  							<textarea name="bio"></textarea><br>
+  							<textarea name="bio"><%= u.getBio() %></textarea><br>
   							<label for="fileToUpload">Profile image</label>
   							<input type="file" name="picture" id="fileToUpload"><br>
 	                        <% if(request.getAttribute("error") != null) { %>
@@ -132,6 +133,7 @@ if(u == null) {
   							
   							<input type="submit" value="Submit">
 						</form> 
+						</div>
 					</div>
 					</div>
 				</div>
