@@ -35,7 +35,7 @@
                             <h6 class="heading">Student Support Blog</h6>
                         </div>
                         <img src="images/intro.jpg" alt="">
-                        <footer><a href="post1.jsp">More Details</a></footer>
+                        <footer><a href="studentsupport_article.jsp">More Details</a></footer>
                         </article>
                     </li>
                     <li class="one_third">
@@ -44,7 +44,7 @@
                             <h6 class="heading">International Student </h6>
                         </div>
                         <img src="images/campus.jpg" alt="">
-                        <footer><a href="post1.jsp">More Details</a></footer>
+                        <footer><a href="intstudent_article.jsp">More Details</a></footer>
                         </article>
                     </li>
                     <li class="one_third">
@@ -53,7 +53,7 @@
                             <h6 class="heading">Covid-19 Latest News</h6>
                         </div>
                         <img src="images/productivity.jpg" alt="">
-                        <footer><a href="post1.jsp">More Details</a></footer>
+                        <footer><a href="covid_article.jsp">More Details</a></footer>
                         </article>
                     </li>
                 </ul>
