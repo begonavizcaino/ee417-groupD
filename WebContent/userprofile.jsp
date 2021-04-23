@@ -130,7 +130,26 @@ if(u == null) {
 					</div>
 					<div class="profile-setting tab">
 						<h1>Account Settings</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Optio, eligendi magnam. Fuga ducimus assumenda, nemo sit, quod eveniet quidem dolorum modi voluptas dignissimos tempore omnis saepe officils aliquam. Tempore sed voluptatum, illo sit vitae ullam consequatur, architecto enim iusto asperiores supiditate debitis blanditiis harum quas ad dolor dolores veritatis molestiae! Apreiam, laboriosam! Temporibus modi vero ab quis, qui fuga reiciendis, hic, molestias vel ut recusandae eius nesciunt harum praesentium? Libero. </p>
+						<form action="/action_page.php">
+  							<label for="username">First name:</label><br>
+  							<input type="text" id="username" name="firstname" placeholder="First Name"><br>
+  							<label for="username2">Last name:</label><br>
+  							<input type="text" id="username2" name="lastname" placeholder="Last Name"><br>
+  							<label for="email">Email:</label><br>
+  							<input type="email" id="email" name="email" placeholder="Email"><br>
+  							<label for="password">Password:</label><br>
+  							<input type="password" id="password" name="password" placeholder="Password" value=""><br>
+  							<label for="lname">Date of birth:</label><br>
+  							<input type="date" id="date" name="birth"><br>
+  							<label for="bio">Bio:</label><br>
+  							<textarea name="bio"></textarea><br>
+  							<label for="fileToUpload">Profile image</label>
+  							<input type="file" name="fileToUpload" id="fileToUpload"><br>
+  							
+  							
+  							<input type="submit" value="Submit">
+						</form> 
+					</div>
 					</div>
 				</div>
 			</div>
