@@ -41,7 +41,7 @@
                     <li class="one_third">
                         <article>
                         <div>
-                            <h6 class="heading">International Student </h6>
+                            <h6 class="heading">International Students </h6>
                         </div>
                         <img src="images/campus.jpg" alt="">
                         <footer><a href="intstudent_article.jsp">More Details</a></footer>

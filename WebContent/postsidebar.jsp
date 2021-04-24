@@ -43,6 +43,16 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="col-lg-12">
+                	<div class="sidebar-item create-new-post">
+                        <div class="content">
+                		<button class="createbtn" onclick="location.href='createpost.jsp'" type="button" >
+							<i class="fa fa-plus"></i>      Create new post
+						</button>
+						</div>
+                	</div>
+                </div>
             </div>
         </div>
     </div>

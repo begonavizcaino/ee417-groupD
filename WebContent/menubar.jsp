@@ -28,17 +28,6 @@ ArrayList<Post> categories = Database.postDao.findCategories();
             	<li><a href="userprofile.jsp">Profile</a></li>
             	<li><a href="Disconnect">Disconnect</a></li>
             <% } %>
-            <li id="searchform">
-                <div>
-                <form action="#" method="post">
-                    <fieldset>
-                    <legend>Quick Search:</legend>
-                    <input type="text" placeholder="Enter search term&hellip;">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                    </fieldset>
-                </form>
-                </div>
-            </li>
             </ul>
         </div>
     </div>
