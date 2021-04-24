@@ -32,12 +32,9 @@
                                 <div class="meta-category">
                                     <span>Academic</span>
                                 </div>
-                                <a href="post1.jsp"><h4>Student Support Stories</h4></a>
-                                <ul class="post-info">
-                                    <li><a href="#">Admin</a></li>
-                                    <li><a href="#">April 18th, 2021</a></li>
-                                    <li><a href="#">4 Comments</a></li>
-                                </ul>
+                                <div class="link-to-posts">
+                                <li><a href="main.jsp?category=1"><h4>Student Support Stories</h4></a></li>
+                                </div>
                             </div>
                         </div>
                     </div>

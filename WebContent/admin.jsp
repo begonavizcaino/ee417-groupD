@@ -177,6 +177,11 @@ ArrayList<Post> posts = Database.postDao.findPosts(-1, Integer.MAX_VALUE, 999);
 		    <input type="text" name="name" />
 		    <button class="w3-button w3-dark-grey" type="submit">Add new category</i></button>
 	    </form>
+	    <br>
+	    <form action="./CreateConversation" method="post">
+		    <input type="text" name="name" />
+		    <button class="w3-button w3-dark-grey" type="submit">Add new conversation</i></button>
+	    </form>
 	  </div>
   	<div class="w3-third">
 	  		<canvas id="myCanvas" style="background: white;"></canvas>

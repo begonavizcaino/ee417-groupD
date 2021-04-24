@@ -103,6 +103,7 @@ if(u == null) {
 							                    </div>
 							                </div>
 							            </div>
+							            <span class ="line"></span>
 							        </div>
 							    </div>
 							</div>

@@ -257,12 +257,44 @@ button.createbtn i
     display: none;
 }
 
-#see-more-bio,
-#see-less-bio
+.down-content span
 {
-    color: blue;
-    cursor: pointer;
-    text-transform: lowercase;
+        color: hsla(13, 90%, 58%, 1);
+}
+.down-content a
+{
+        color: black;
+}
+.down-content a h4 
+{
+    padding: 10px;
+}
+.down-content ul
+{
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    height: 40px;
+}
+
+.down-content p
+{
+    text-align: left;
+}
+.col-6 ul
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+}
+.col-6 ul li i {
+    color: hsla(13, 90%, 58%, 1);
+}
+.line
+{
+    border-bottom: 2px solid black;
+    display: block;
 }
 
 label{
