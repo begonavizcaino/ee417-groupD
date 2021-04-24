@@ -47,7 +47,7 @@ ArrayList<Post> posts = Database.postDao.findPosts(-1, Integer.MAX_VALUE, 999);
   </header>
 
   <div class="w3-row-padding w3-margin-bottom">
-    <div class="w3-quarter">
+    <div class="w3-third">
       <div class="w3-container w3-grey w3-text-white w3-padding-16">
         <div class="w3-left"><i class="fa fa-comment w3-xxlarge"></i></div>
         <div class="w3-right">
@@ -57,18 +57,8 @@ ArrayList<Post> posts = Database.postDao.findPosts(-1, Integer.MAX_VALUE, 999);
         <h4>Categories</h4>
       </div>
     </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-brown w3-text-white w3-padding-16">
-        <div class="w3-left"><i class="fa fa-eye w3-xxlarge"></i></div>
-        <div class="w3-right">
-          <h3>99</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Visits</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-grey w3-text-white w3-padding-16">
+    <div class="w3-third">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
         <div class="w3-left"><i class="fa fa-laptop w3-xxlarge"></i></div>
         <div class="w3-right">
           <h3><%= posts.size() %></h3>
@@ -77,7 +67,7 @@ ArrayList<Post> posts = Database.postDao.findPosts(-1, Integer.MAX_VALUE, 999);
         <h4>Posts</h4>
       </div>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-third">
       <div class="w3-container w3-brown w3-text-white w3-padding-16">
         <div class="w3-left"><i class="fa fa-users w3-xxlarge"></i></div>
         <div class="w3-right">
@@ -95,11 +85,6 @@ ArrayList<Post> posts = Database.postDao.findPosts(-1, Integer.MAX_VALUE, 999);
 
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-third">
-        <h5>Regions</h5>
-        <img src="w3images/region.jpg" style="width:100%" alt="Google Regional Map">
-      </div>
-      <div class="w3-twothird">
         <h5>Last posts</h5>
         <table class="w3-table w3-striped w3-white">
         	<% for(Post p : posts) { %>
@@ -111,7 +96,6 @@ ArrayList<Post> posts = Database.postDao.findPosts(-1, Integer.MAX_VALUE, 999);
       			</tr>
         	<% } %>
         </table>
-      </div>
     </div>
   </div>
   <hr>
@@ -129,7 +113,6 @@ ArrayList<Post> posts = Database.postDao.findPosts(-1, Integer.MAX_VALUE, 999);
 			</tr>
 		</c:forEach>
     </table><br>
-    <button class="w3-button w3-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button>
   </div>
  
   <hr>
