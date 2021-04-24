@@ -70,7 +70,7 @@ function loadMessages(count, ctg, sucCallback, failCallback) {
                 for (let i = 0; i < res.posts.length; i++) {
                     const data = {
                         id: res.posts[i].id,
-                        img: res.posts[i].attachedContent[0] ? "data:image/jpeg;base64," + res.posts[i].attachedContent[0] : "",
+                        img: res.posts[i].attachedContent[0] ? res.posts[i].attachedContent[0] : "",
                         title: res.posts[i].title,
                         content: res.posts[i].message.length > MAX_PREVIEW_CONTENT_LENGTH ?
                                     res.posts[i].message.substring(0, MAX_PREVIEW_CONTENT_LENGTH) + "..." : res.posts[i].message,

@@ -21,6 +21,112 @@
 
 	<%@ include file="menubar.jsp" %>
 	
+	<!-- Navigation/Logo bar End -->
+	<div class="main-banner header-text">
+            <div class="container-fluid">
+                <div class="owl-banner owl-carousel owl-loaded owl-drag">
+                    <div class="item">
+                        <img src="images/intro.jpg" style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>Academic</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Student Support Stories</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/productivity.jpg"style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>College Life</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Staying Productive</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/intro3.jpg" style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>Campus</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Making most of your day</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/intro.jpg" style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>Academic</span>
+                                </div>
+                                <a href="#"><h4>Student Support Stories</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/intro2.jpg"style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>College Life</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Staying Productive</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/intro3.jpg" style="filter: brightness(0.4)" alt="">
+                        <div class="item-content">
+                            <div class="main-content">
+                                <div class="meta-category">
+                                    <span>Campus</span>
+                                </div>
+                                <a href="post1.jsp"><h4>Making most of your day</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">4 Comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<!-- End Top Background Image Wrapper -->
+	
     <!-- Blog Highlights Start -->
 
     <div class="wrapper row3 coloured">

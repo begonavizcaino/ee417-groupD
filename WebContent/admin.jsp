@@ -167,13 +167,16 @@ ArrayList<Post> posts = Database.postDao.findPosts(-1, Integer.MAX_VALUE, 999);
 	    	<th><b>Number of posts</b></th>
 	  	  </tr>
 		    <% for(Post c : categories) { %>
-           		<tr>
-			        <td><%= c.getTitle() %></td>
-			        <td><%= c.getComments().size() %></td>
+           		<tr class="category">
+			        <td class="title"><%= c.getTitle() %></td>
+			        <td class="count"><%= c.getComments().size() %></td>
       			</tr>
 	    	<% } %>
 	    </table><br>
-	    <button class="w3-button w3-dark-grey">Add new category</i></button>
+	    <form action="./CreateCategory" method="post">
+		    <input type="text" name="name" />
+		    <button class="w3-button w3-dark-grey" type="submit">Add new category</i></button>
+	    </form>
 	  </div>
   	<div class="w3-third">
 	  		<canvas id="myCanvas" style="background: white;"></canvas>

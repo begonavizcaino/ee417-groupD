@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -15,7 +16,10 @@ public class PostDao extends DaoId<Post> {
 	public void insert(Post data) throws SQLException {
 		PreparedStatement st = Database.getDbConnection().prepareStatement("INSERT INTO " + tableName + " (parent_id, user_id, title, message) VALUES (?, ?, ?, ?)", 
 				Statement.RETURN_GENERATED_KEYS);
-		st.setInt(1, data.getParentId());
+		if(data.getParentId() > 0)
+			st.setInt(1, data.getParentId());
+		else
+			st.setNull(1, Types.INTEGER);
 		st.setInt(2, data.getUserId());
 		st.setString(3, data.getTitle());
 		st.setString(4, data.getMessage());
