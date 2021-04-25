@@ -28,43 +28,55 @@
     <div class="wrapper bgded overlay" style="background-image:url('images/aboutus.jpg')">
         <section class="hoc container clear" id="aboutus"> 
             <div class="sectiontitle center">
-                    <h3 class="heading">About Us</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officia quo nam reiciendis dignissimos sequi dolor et,
-                        quasi libero animi obcaecati quibusdam dolores optio! Dolorum maiores aut inventore eos fuga! Possimus,
-                        cupiditate illum dolore asperiores vitae aut voluptatum recusandae saepe?
-                    </p>
-            </div>
-            <div class="">
-                    <h3 class="heading">Who We Are</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam inventore iure quas ducimus odio iusto aperiam. Blanditiis 
-                        commodi modi possimus, ipsum veniam in fugit, ipsam cupiditate distinctio quos praesentium? Magnam voluptate facilis nemo. 
-                        Eligendi obcaecati officia repellendus natus sint commodi et laudantium accusantium reiciendis aliquid totam vitae similique,
-                         veniam blanditiis tenetur! Perferendis quaerat illum doloremque magnam minus sunt deserunt hic nihil. Dolorum aliquid itaque, 
-                         suscipit porro similique natus voluptatum iste necessitatibus soluta nihil error alias dignissimos aspernatur, explicabo recusandae 
-                         repellat, quo tenetur possimus nulla ratione pariatur consequuntur tempora repudiandae! Quibusdam, sunt! Culpa quod recusandae nihil, 
-                         quo iste neque. Consequatur, necessitatibus?
-                    </p>
-            </div>
-            <div class="">
-                <h3 class="heading">Our Values</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam inventore iure quas ducimus odio iusto aperiam. Blanditiis 
-                    commodi modi possimus, ipsum veniam in fugit, ipsam cupiditate distinctio quos praesentium? Magnam voluptate facilis nemo. 
-                    Eligendi obcaecati officia repellendus natus sint commodi et laudantium accusantium reiciendis aliquid totam vitae similique,
-                     veniam blanditiis tenetur! Perferendis quaerat illum doloremque magnam minus sunt deserunt hic nihil. Dolorum aliquid itaque, 
-                     suscipit porro similique natus voluptatum iste necessitatibus soluta nihil error alias dignissimos aspernatur, explicabo recusandae 
-                     repellat, quo tenetur possimus nulla ratione pariatur consequuntur tempora repudiandae! Quibusdam, sunt! Culpa quod recusandae nihil, 
-                     quo iste neque. Consequatur, necessitatibus?
+                <h3 class="heading">About Us</h3>
+                <p>
+                    Welcome to International Blog, your number one source for international student communities .
+                    We're dedicated to providing you the very best of latest information and guidelines about international students.
+                    Founded in [2021] by [EE417 Group-D], We hope you enjoy our communities as much as we enjoy offering them to you.
+                    If you have any questions or comments, please don't hesitate to contact us.
                 </p>
             </div>
-            <div class="">
+            <div class="sectiontitle center">
+                    <h3 class="heading">Who We Are</h3>
+                    <p>
+                        International blog is an international student Network menat to connected studnet all around the world sharing stroies , 
+                        ideas and inspiring each other.                        
+                    </p>
+                    <p>
+                        International blog is is non-profit organization owned and run by EE417 Group-D team.                  
+                    </p>
+            </div>
+            <div class="sectiontitle center">
+                <h3 class="heading">Our Values</h3>
+                <p>
+                    Focus on impact
+                </p>
+                <p>
+                    Collaboration  
+                </p>
+                <p>
+                    We Are One team 
+                </p>
+                <p>
+                    home Away from Home
+                </p>
+            </div>
+            <div class="sectiontitle center">
                 <h3 class="heading">Our Services</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam inventore iure quas ducimus odio iusto aperiam. Blanditiis 
-                    commodi modi possimus, ipsum veniam in fugit, ipsam cupiditate distinctio quos praesentium? Magnam voluptate facilis nemo. 
-                    Eligendi obcaecati officia repellendus natus sint commodi et laudantium accusantium reiciendis aliquid totam vitae similique,
-                     veniam blanditiis tenetur! Perferendis quaerat illum doloremque magnam minus sunt deserunt hic nihil. Dolorum aliquid itaque, 
-                     suscipit porro similique natus voluptatum iste necessitatibus soluta nihil error alias dignissimos aspernatur, explicabo recusandae 
-                     repellat, quo tenetur possimus nulla ratione pariatur consequuntur tempora repudiandae! Quibusdam, sunt! Culpa quod recusandae nihil, 
-                     quo iste neque. Consequatur, necessitatibus?
+                <p>
+                    International Blog is A platform for students to develop their VOICE and connect with an authentic audience.
+                     This means students can share their opinions, thoughts and interests with an audience who will be reading their posts.
+                      Knowing that there is a "real" audience
+                </p>
+                <p>
+                    Our mission is to help connect international students by giving the opptunity to 
+                    REFLECT on their learning, They can take the time to reflect and connect on prior knowledge or personal experiences.
+                     This in turn can allow for greater opportunity to make further connections on what is being learned 
+                     cross-curricularly or in the student's lives.
+                </p>
+                <p>
+                    International Blog is A space to CONNECT, and these connections can be made in multiple ways, by creating a post or comment on a post 
+                    on specific topic or city or university. Students can also connects with other bloggers who may belong to same community or other relevant communities
                 </p>
             </div>
         </section>

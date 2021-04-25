@@ -99,124 +99,22 @@
             </div>
             <div class="one_quarter  team-member" >
                 <div class="team-member__pic">
-                    <img src="images/team2.jpg"  alt="">
+                    <img src="images/Ayman.JPG"  alt="">
                 </div>
                 <div class="team-member__info">
                     <p class="team-member__name">
-                        Edward Jan xx
-                        <span>Public Relation</span>
+                        Ayman Hamad
+                        <span>Frontend developer</span>
                     </p>
-                    <ul class="team-member__social">
-                        <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="one_quarter  team-member" >
-                <div class="team-member__pic">
-                    <img src="images/team3.jpg"  alt="">
-                </div>
-                <div class="team-member__info">
-                    <p class="team-member__name">
-                        Derek Silver xx
-                        <span>Social Media </span>
+                    <p>Master level student in Computing & Engineering at DCU, currently working as Technical Solution Maer specialized in mobile broadband and wireless technologies  solutions.
                     </p>
-                    <ul class="team-member__social">
-                        <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="one_quarter  team-member" >
-                <div class="team-member__pic">
-                    <img src="images/team4.jpg"  alt="">
-                </div>
-                <div class="team-member__info">
-                    <p class="team-member__name">
-                        Sarah Parker xx
-                        <span>Student Support</span>
-                    </p>
-                    <ul class="team-member__social">
-                        <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    </ul>
                 </div>
             </div>
 
         </section>
     </div>
 
-        <!-- Repeat  -->
-
-        <div class="wrapper row3 coloured">
-            <section class="hoc container clear team-block" > 
-                <div class="sectiontitle center">
-                        <h3 class="heading">Meet Our Team</h3>
-                        <p> Studnet Support </p>
-                </div>
-                <div class="one_third first team-member" >
-                    <div class="team-member__pic">
-                        <img src="images/team1.jpg"  alt="">
-                    </div>
-                    <div class="team-member__info">
-                        <p class="team-member__name">
-                            Sarah Parker xx
-                            <span>Project Manager</span>
-                        </p>
-                        <ul class="team-member__social">
-                            <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="one_third  team-member" >
-                    <div class="team-member__pic">
-                        <img src="images/team2.jpg"  alt="">
-                    </div>
-                    <div class="team-member__info">
-                        <p class="team-member__name">
-                            Edward Jan xx
-                            <span>Public Relation</span>
-                        </p>
-                        <ul class="team-member__social">
-                            <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="one_third  team-member" >
-                    <div class="team-member__pic">
-                        <img src="images/team3.jpg"  alt="">
-                    </div>
-                    <div class="team-member__info">
-                        <p class="team-member__name">
-                            Derek Silver xx
-                            <span>Social Media </span>
-                        </p>
-                        <ul class="team-member__social">
-                            <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-    
-            </section>
-        </div>
-
-
+      
     <!-- Meet Our Team End-->
   <!-- ******************************************************************************************* -->
 
