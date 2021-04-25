@@ -1,6 +1,8 @@
 package servlets;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Base64;
@@ -42,9 +44,9 @@ public class Post extends HttpServlet {
 			response.sendRedirect("main.jsp");
 			return;
 		}
-		int category = request.getParameter("category") != null ? Integer.parseInt(request.getParameter("category")) : -1;
-		int lastId = request.getParameter("last_id") != null ? Integer.parseInt(request.getParameter("last_id")) : Integer.MAX_VALUE;
-		int count = request.getParameter("count") != null ? Integer.parseInt(request.getParameter("count")) : 3;
+		int category = !request.getParameter("category").equals("") ? Integer.parseInt(request.getParameter("category")) : -1;
+		int lastId = !request.getParameter("last_id").equals("") ? Integer.parseInt(request.getParameter("last_id")) : Integer.MAX_VALUE;
+		int count = !request.getParameter("count").equals("") ? Integer.parseInt(request.getParameter("count")) : 3;
 		
 		response.setContentType("application/json");
 		JSONObject json = new JSONObject();
@@ -107,9 +109,17 @@ public class Post extends HttpServlet {
 				Collection<Part> parts = request.getParts();
 				for (Part part : parts) {
 					if(part.getName().equals("picture") && (part.getContentType().equals("image/png") || part.getContentType().equals("image/jpeg"))) {
-						byte[] bytes = new byte[10240];
-						part.getInputStream().read(bytes);
-						String encodedImage = Base64.getEncoder().encodeToString(bytes);
+						InputStream in = part.getInputStream();
+						ByteArrayOutputStream outByte = new ByteArrayOutputStream();
+						byte[] buffer = new byte[1024];
+				        int length = 0;
+				        while ((length = in.read(buffer, 0, 1024)) != -1) {
+				            outByte.write(buffer,0,length);
+				        }
+				        String encodedImage = "data:" + part.getContentType() + ";base64, " + Base64.getEncoder().encodeToString(outByte.toByteArray());
+//						byte[] bytes = new byte[10240];
+//						part.getInputStream().read(bytes);
+//						String encodedImage = Base64.getEncoder().encodeToString(bytes);
 						AttachedContent a = new AttachedContent(p.getId(), encodedImage);
 						Database.attachedContentDao.insert(a);
 					}

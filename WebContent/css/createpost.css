@@ -400,7 +400,6 @@ h1, h2, h3, h4, h5, h6, .heading{
     height:39px; 
     line-height:39px; 
     padding:0 20px; 
-    text-transform:uppercase;
 }
 #introblocks > ul > li > article {
     position:absolute; 
@@ -408,7 +407,6 @@ h1, h2, h3, h4, h5, h6, .heading{
     right:0; 
     height:100%; 
     padding:0 15px;
-    font-family:"FontAwesome";
     content:"\f105"; 
     border-left:1px solid;
 }
@@ -938,7 +936,6 @@ ul.page-numbers li a:hover {
 	height: 46px;
 	border: 1px solid #eee;
 	font-size: 13px;
-	text-transform: uppercase;
 	font-weight: 500;
 	color: #7a7a7a;
 	outline: none;
@@ -951,7 +948,6 @@ ul.page-numbers li a:hover {
 	height: 46px;
 	border: 1px solid #eee;
 	font-size: 13px;
-	text-transform: uppercase;
 	font-weight: 500;
 	color: #7a7a7a;
 	outline: none;
@@ -1015,7 +1011,6 @@ ul.page-numbers li a:hover {
 	height: 50px;
 	border: 1px solid #eee;
 	font-size: 13px;
-	text-transform: uppercase;
 	font-weight: 500;
 	color: #7a7a7a;
 	outline: none;

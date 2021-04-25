@@ -49,7 +49,7 @@ public class Signup extends HttpServlet {
 			map.put("username", username);
 			try {
 				if(Database.userDao.findOneBy(map) == null) {
-					User u = new User(username, password, Role.USER, "", firstName, lastName, nationality, studyIn, birth);
+					User u = new User(username, password, Role.USER, "", firstName, lastName, nationality, studyIn, birth, "");
 					Database.userDao.insert(u);
 					HttpSession session = request.getSession();
 					session.setAttribute("username", username);

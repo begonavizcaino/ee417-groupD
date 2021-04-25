@@ -6,6 +6,11 @@
 }
 
 /* Banner Style */
+.main-banner {
+	position: relative;
+	z-index: 10;
+}
+
 .main-banner .container-fluid {
 	padding: 0px 10px;
 	margin-bottom: -24px;

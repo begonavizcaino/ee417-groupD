@@ -15,6 +15,14 @@
     margin: 0 100px;
 }*/
 
+.post-info a{
+	padding-right: 10px;
+}
+
+.post-tags i{
+	padding-right: 10px;
+}
+
 .profile-header
 {
     background: #ffff;
@@ -213,6 +221,10 @@ button.createbtn i
 
 /*--------------right-side----------------*/
 
+.right-side {
+    width: 100%;
+}
+
 .nav
 {
     width: 100%;
@@ -253,90 +265,203 @@ button.createbtn i
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
- /* Media Queries --> Start
-------------------------------------------------------- */
-
-@-ms-viewport{width:device-width;}
-
-
-/* Media Queries  --> Max Wrapper Width - Laptop, Desktop etc.
--------------------------------------------------------- */
-
-@media screen and (min-width:978px){
-	.hoc{max-width:978px;}
+.down-content span
+{
+        color: hsla(13, 90%, 58%, 1);
+}
+.down-content a
+{
+        color: black;
+}
+.down-content a h4 
+{
+    padding: 10px;
+}
+.down-content ul
+{
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    height: 40px;
 }
 
-/* Media Queries  --> Mobile Devices
-------------------------------------------------------- */
-
-@media screen and (max-width:900px){
-	.hoc{max-width:90%;}
-
-	#topbar{}
-
-	#header{padding:30px 0;}
-	#header #logo{margin-top:3px;}
-
-
-/* Media Queries  --> Acreen Max 750px
----------------------------------------------------------*/
-
-@media screen and (max-width:750px){
-	.flex-direction-nav .flex-prev, .flex-direction-nav .flex-next{display:none;}
-	.flex-control-nav{display:block;}
-
-	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
-	.fl_left, .fl_right{display:block; float:none;}
-	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
-
-	#topbar{text-align:center;}
-	#topbar ul{margin:0 0 15px 0;}
-	#topbar div:last-child ul{margin:0;}
-
+.down-content p
+{
+    text-align: left;
+}
+.col-6 ul
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+}
+.col-6 ul li i {
+    color: hsla(13, 90%, 58%, 1);
+}
+.line
+{
+    border-bottom: 2px solid black;
+    display: block;
 }
 
-/* Media Queries  --> Acreen Max 450px
----------------------------------------------------- */
+label{
+  text-align: left;
+}
 
-@media screen and (max-width:450px){
-	#topbar ul li{margin-bottom:2px; padding-right:0; border-right:none;}
+input[type=text], input[type=password], input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #FF6600;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background: rgba(255, 125, 0, .9);
+}
+
+ .form{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/*-------------Media Query --> Desktop,Laptop --> Max 1100px---------------*/
+
+@media(max-width: 1100px)
+{
+    .profile-side
+    {
+        width: 250px;
+        padding: 90px 15px 20px;
+    }
+    .profile-img img
+    {
+        height: 200px;
+        width: 200px;
+        left: 50px;
+        top: 50px;
+    }
+}
+
+/*-------------Media Query --> Max 900px---------------*/
+
+@media(max-width: 900px)
+{
+    body
+    {
+        margin: 0 20px;
+    }
+    .profile-header
+    {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .profile-img
+    {
+        float: left;
+        width: 100%;
+        height: 200px;
+    }
+    .profile-img img
+    {
+        position: relative;
+        left: 0;
+    }
+    .profile-nav-info
+    {
+        text-align: center;
+    }
+    .profile-nav-info .address
+    {
+        justify-content: center;
+    }
+    .profile-option
+    {
+        right: 20px;
+        top: 75%;
+        transform: translateY(50%);
+    }
+    .main-bd
+    {
+        flex-direction: column;
+        padding-right: 0px;
+    }
+    .profile-side
+    {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        margin: 5px 0;
+    }
 
 	
 
-/* Media Queries  --> 
---------------------------------------------------- */
-@media screen and (max-width:650px){
-	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
-	.scrollable table{margin:0; padding:0; white-space:nowrap;}
 
-	.inline li{display:block; margin-bottom:10px;}
-	.pushright li{margin-right:0;}
+}
 
-	.font-x2{font-size:1.4rem;}
-	.font-x3{font-size:1.6rem;}
+/*-------------Media Query --> Phone,Tabs --> Max 400px---------------*/
 
-}   
-
- /* Media Queries --> End
---------------------------------------------------------------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
+@media(max-width: 400px)
+{
+    body
+    {
+        margin: 5px;
+    }
+    .profile-header h3
+    {
+        font-size: 1.7rem;
+    }
+    .profile-header p,
+    .profile-header span
+    {
+        font-size: .9rem;
+    }
+    .profile-option
+    {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 15px;
+        top: 83%;
+    }
+    .profile-option .notification .alert-message
+    {
+        top: -3px;
+        right: -4px;
+        padding: 4px;
+        height: 15px;
+        width: 15px;
+        font-size: .7rem;
+    }
+}
 
 

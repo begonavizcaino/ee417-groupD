@@ -18,6 +18,7 @@ boolean mode = "signup".equals(request.getAttribute("mode")) || "signup".equals(
     <link rel='stylesheet' type='text/css' media='screen' href='css/landingpage.css'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/60b74c23d5.js" crossorigin="anonymous"></script>
+    <script src="js/packages/jquery-3.6.0.min.js" type="text/javascript"></script>
 </head>
 <body >
 
@@ -34,9 +35,9 @@ boolean mode = "signup".equals(request.getAttribute("mode")) || "signup".equals(
                         <h1>Create Account</h1>
                         <!-- Social Medeia Container -->
                         <div class="social-container">
-                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="comingsoon.jsp" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="comingsoon.jsp" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="comingsoon.jsp" class="social"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                         <span>or use your email for registration</span>
                         <!-- first Name -->
@@ -594,9 +595,9 @@ boolean mode = "signup".equals(request.getAttribute("mode")) || "signup".equals(
                     <form action="Login" method="post">
                         <h1>Sign in</h1>
                         <div class="social-container">
-                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="comingsoon.jsp" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="comingsoon.jsp" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="comingsoon.jsp" class="social"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                         <span>or use your account</span>
                         <!-- User/E-mail  -->
@@ -641,9 +642,7 @@ boolean mode = "signup".equals(request.getAttribute("mode")) || "signup".equals(
 
 <!-- ******************************************************************************************* -->
     <!-- Java Script Start-->
-    <script src="script/jquery-3.6.0.js" type="text/javascript"></script>
-    <script src="script/main.js" type="text/javascript"></script>
-
+    <script src="js/sign/signUp.js" type="text/javascript"></script>
 
     <!-- Java Script End -->
 <!-- ******************************************************************************************* -->

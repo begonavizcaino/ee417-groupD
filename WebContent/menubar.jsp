@@ -22,23 +22,12 @@ ArrayList<Post> categories = Database.postDao.findCategories();
             <ul>
             <li><a href="index.jsp"><i class="fa fa-lg fa-home"></i></a></li>
             <% if(menubaru == null) { %>
-	            <li><a href="signup.jsp">Login</a></li>
+	            <li><a href="signup.jsp?mode=login">Login</a></li>
 	            <li><a href="signup.jsp?mode=signup">Sign-Up</a></li>
             <% } else { %>
             	<li><a href="userprofile.jsp">Profile</a></li>
             	<li><a href="Disconnect">Disconnect</a></li>
             <% } %>
-            <li id="searchform">
-                <div>
-                <form action="#" method="post">
-                    <fieldset>
-                    <legend>Quick Search:</legend>
-                    <input type="text" placeholder="Enter search term&hellip;">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                    </fieldset>
-                </form>
-                </div>
-            </li>
             </ul>
         </div>
     </div>
@@ -84,17 +73,16 @@ ArrayList<Post> categories = Database.postDao.findCategories();
 	        </header>
 	    </div>
     </div>
+    
+    
 
 <!-- ******************************************************************************************* -->
-    <!-- Java Script Start--
-    <script src="script/jquery-3.6.0.js" type="text/javascript"></script>
-    <script src="script/main.js" type="text/javascript"></script>
-
-    <script src="script/custom.js"></script>
-    <script src="script/owl.js"></script>
-    <script src="script/slick.js"></script>
-    <script src="script/isotope.js"></script>
-    <script src="script/accordions.js"></script>
+    <!-- Java Script Start-->
+    <script src="js/packages/owl.js"></script>
+    <script src="js/packages/isotope.js"></script>
+    <script src="js/packages/accordions.js"></script>
+    <script src="js/menubar/custom.js"></script>
+    <script src="js/menubar/menubar.js"></script>
 
     <!-- Java Script End -->
 <!-- ******************************************************************************************* -->

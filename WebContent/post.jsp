@@ -17,16 +17,11 @@ ArrayList<Post> comments;
 
 ArrayList<AttachedContent> contents;
 
-try {
 	int postId = Integer.parseInt(request.getParameter("postid"));
 	post = Database.postDao.findOneById(postId);
 	if(post == null || post.getParentPost() == null) throw new Exception();
 	comments = post.getComments();// each getComments is a sql query, let's make only one
 	contents = post.getAttachedContent();
-} catch(Exception e) {
-	response.sendRedirect("./main.jsp");
-	return;// stop the rest of the html from being sent alongside the redirect (faster + safer)
-}
 %>
 <!DOCTYPE html>
 <html>
@@ -42,6 +37,7 @@ try {
 	    <link rel='stylesheet' type='text/css' media='screen' href='css/landingpage.css'>
 	    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 	    <script src="https://kit.fontawesome.com/60b74c23d5.js" crossorigin="anonymous"></script>
+        <script src="js/packages/jquery-3.6.0.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 		
@@ -51,6 +47,9 @@ try {
 
     <div class="wrapper">
         <div class="hoc container clear"> 
+            <div class="main-button">
+                <a href="main.jsp">Back</a>
+            </div>
             <section class="blog-posts">
                 <div class="two_third first">  
                     <div class="col-lg-8">
@@ -62,15 +61,16 @@ try {
                                 <div class="col-lg-12">
                                     <div class="blog-post">
                                         <div class="blog-thumb">
-                                            <img src="images/intro.jpg" alt="">
+                                            <img id="post-image" src="" alt="">
+                                            <p id="post-temp-p" style="display: none;"><%= post.getFirstAttachedContent() %></p>
                                         </div>
                                         <div class="down-content">
                                             <span>ACADEMIC</span>
-                                            <a href="post1.html"><h4>Student Support Stories</h4></a>
+                                            <a><h4><%=post.getTitle() %></h4></a>
                                             <ul class="post-info">
-                                                <li><a href="#">Admin</a></li>
-                                                <li><a href="#">April 18th, 2021</a></li>
-                                                <li><a href="#"><%= comments.size() %> Comments</a></li>
+                                                <li><a href="#"><%=post.getUser().getUsername() %></a></li>
+                                                <li><a><%=post.getDate() %></a></li>
+                                                <li><a><%= comments.size() %> Comments</a></li>
                                             </ul>
                                             <p><%=post.getMessage() %></p>
                                             <div class="post-options">
@@ -79,13 +79,6 @@ try {
                                                         <ul class="post-tags">
                                                             <li><i class="fa fa-tags"></i></li>
                                                             <li><a href="#">Academic</a>,</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <ul class="post-share">
-                                                            <li><i class="fa fa-share-alt"></i></li>
-                                                            <li><a href="#">Facebook</a>,</li>
-                                                            <li><a href="#"> Twitter</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -180,15 +173,11 @@ try {
     <!-- Footer-> Main Footer Start -->
 
     <%@ include file="footer.jsp" %>
-    
-    <script src="script/jquery-3.6.0.js" type="text/javascript"></script>
-    <script src="script/main.js" type="text/javascript"></script>
-
-    <script src="script/custom.js"></script>
-    <script src="script/owl.js"></script>
-    <script src="script/slick.js"></script>
-    <script src="script/isotope.js"></script>
-    <script src="script/accordions.js"></script>
-		
 	</body>
+
+    <script>
+        $(function() {
+            $("#post-image").attr("src", $("#post-temp-p").html())
+        })
+    </script>
 </html>

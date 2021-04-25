@@ -1,8 +1,11 @@
 package db;
 
 import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User extends TableRowId {
 
@@ -15,6 +18,7 @@ public class User extends TableRowId {
 	private String nationality;
 	private String studyIn;
 	private Date birth;
+	private String bio;
 	
 	public User(ResultSet rs) throws SQLException {
 		super(rs);
@@ -27,10 +31,11 @@ public class User extends TableRowId {
 		nationality = rs.getString("nationality");
 		studyIn = rs.getString("studyin");
 		birth = rs.getDate("birth");
+		bio = rs.getString("bio");
 	}
 
 	public User(String username, String password, Role role, String picture, String firstName, String lastName,
-			String nationality, String studyIn, Date birth) {
+			String nationality, String studyIn, Date birth, String bio) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -41,6 +46,7 @@ public class User extends TableRowId {
 		this.nationality = nationality;
 		this.studyIn = studyIn;
 		this.birth = birth;
+		this.bio = bio;
 	}
 
 	public String getUsername() {
@@ -113,5 +119,31 @@ public class User extends TableRowId {
 
 	public void setBirth(Date birth) {
 		this.birth = birth;
+	}
+
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
+
+	public String getName() {
+		return firstName + " " + lastName;
+	}
+	
+	public ArrayList<Post> getPosts() throws SQLException {
+		ArrayList<Post> ret = new ArrayList<Post>();
+		PreparedStatement st = Database.getDbConnection().prepareStatement("select p.* from posts p " + 
+				"inner join posts p2 on p.parent_id = p2.id " + 
+				"where p.parent_id is not null and p2.parent_id is null and p.user_id = ? " + 
+				"order by p.id desc ");
+		st.setInt(1, getId());
+		ResultSet rs = st.executeQuery();
+		while(rs.next()) {
+			ret.add(new Post(rs));
+		}
+		return ret;
 	}
 }
