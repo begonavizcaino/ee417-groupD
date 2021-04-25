@@ -44,7 +44,25 @@
                                                 <li><a href="#">Admin</a></li>
                                                 <li><a href="#">April 18th, 2021</a></li>
                                             </ul>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores esse neque voluptatem error ducimus maiores velit. Possimus cupiditate fugit doloremque culpa magnam quam minima, nemo similique asperiores molestiae magni veniam aut eveniet! Architecto non adipisci, vitae provident incidunt amet omnis veritatis ea ducimus libero magnam, error accusamus dolores rerum rem iure facilis accusantium cum perferendis vero ipsam molestias? Facere aspernatur totam itaque voluptate provident adipisci nihil, placeat nam ad, alias eligendi commodi dignissimos? Nihil, ipsa porro error magni provident labore voluptatem dolore, voluptas expedita amet soluta. Perspiciatis, blanditiis inventore aut dolorem nulla aliquam, repudiandae optio debitis nesciunt excepturi, fugit sit beatae necessitatibus placeat et? Corporis possimus ipsam laborum quas, eligendi consequuntur eveniet cum. Doloribus, optio iure, quasi in vitae expedita quod, ullam eveniet iusto qui consequatur fugit nobis quia! Perferendis, voluptates dolorum. Ratione nisi maiores quae beatae explicabo expedita, aut voluptate cum, unde adipisci vitae voluptas excepturi a consequatur voluptatem vel enim facere, impedit quaerat. In ab impedit soluta fuga, aut ducimus fugit. Impedit odio exercitationem iste veritatis distinctio, deleniti iusto laudantium commodi error, eveniet quos, adipisci necessitatibus maiores optio odit culpa tempora soluta at. Accusantium, at. Reiciendis eligendi perferendis voluptas, rerum quod obcaecati in, ducimus ipsam ab eum libero.
+                                            <p>
+                                            <h1>General Guidelines</h1>
+			                                <h2><b>Always refer to official sources for information, 
+			                                    watch out for fake news, and be careful about what
+			                                     you read on social media</b>
+			                                </h2>
+			                                <h2>If you have COVID-19 or suspect you have the virus, 
+			                                    you must self-isolate.
+			                                </h2>
+			                                 <h1>Travel Information</h1>
+			                                <b>It is compulsory to wear a face covering on public transport,
+			                                     in shops, and other places where social distancing cannot be observed.</b>
+			                                <br><br><h1>What is COVID-19?</h1>
+			                                COVID-19 is an illness that can affect your lungs and airways. 
+			                                    It is caused by a virus called coronavirus. The novel strand of
+			                                     coronavirus that originated in Hubei Province, China, has spread 
+			                                     to most countries around the world.
+			                                The COVID-19 vaccine is now available in Ireland. People who are 
+			                                    most at risk from COVID-19 will get the vaccine first
                                             </p>
                                         </div>
                                     </div>
@@ -90,7 +108,7 @@
                                 </h2>
                             </div>
                             <div class="sidebar-heading">
-                                <h1>What si COVID-19</h1>
+                                <h1>What is COVID-19?</h1>
                                 <h2>COVID-19 is an illness that can affect your lungs and airways. 
                                     It is caused by a virus called coronavirus. The novel strand of
                                      coronavirus that originated in Hubei Province, China, has spread 

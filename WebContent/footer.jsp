@@ -20,7 +20,7 @@
               <li><a href="index.jsp">Home</a></li>
               <li><a href="aboutus.jsp">About Us</a></li>
               <li><a href="contactus.jsp">Contact Us</a></li>
-              <li><a href="#">Privacy</a></li>
+              <li><a href="privacy.jsp">Privacy</a></li>
             </ul>
           </div>
           <div class="one_third">

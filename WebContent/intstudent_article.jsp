@@ -42,8 +42,27 @@
                                                 <li><a href="#">Admin</a></li>
                                                 <li><a href="#">April 18th, 2021</a></li>
                                             </ul>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores esse neque voluptatem error ducimus maiores velit. Possimus cupiditate fugit doloremque culpa magnam quam minima, nemo similique asperiores molestiae magni veniam aut eveniet! Architecto non adipisci, vitae provident incidunt amet omnis veritatis ea ducimus libero magnam, error accusamus dolores rerum rem iure facilis accusantium cum perferendis vero ipsam molestias? Facere aspernatur totam itaque voluptate provident adipisci nihil, placeat nam ad, alias eligendi commodi dignissimos? Nihil, ipsa porro error magni provident labore voluptatem dolore, voluptas expedita amet soluta. Perspiciatis, blanditiis inventore aut dolorem nulla aliquam, repudiandae optio debitis nesciunt excepturi, fugit sit beatae necessitatibus placeat et? Corporis possimus ipsam laborum quas, eligendi consequuntur eveniet cum. Doloribus, optio iure, quasi in vitae expedita quod, ullam eveniet iusto qui consequatur fugit nobis quia! Perferendis, voluptates dolorum. Ratione nisi maiores quae beatae explicabo expedita, aut voluptate cum, unde adipisci vitae voluptas excepturi a consequatur voluptatem vel enim facere, impedit quaerat. In ab impedit soluta fuga, aut ducimus fugit. Impedit odio exercitationem iste veritatis distinctio, deleniti iusto laudantium commodi error, eveniet quos, adipisci necessitatibus maiores optio odit culpa tempora soluta at. Accusantium, at. Reiciendis eligendi perferendis voluptas, rerum quod obcaecati in, ducimus ipsam ab eum libero.
-                                            </p>
+                                            <p><h2>Your Mental Health</h2>
+				                            Living and studying in a new country is normally a highly positive and life 
+				                            changing experience. However, sometimes the challenges that come with moving
+				                            to a different country can be very stressful.
+				                            Sometimes we suffer in silence unnecessarily, when the best way 
+				                            to deal with a problem is by asking for help.
+				                            <br><br><h2>Non-Emergency Medical Treatment</h2>
+				                            Normally when you are sick or need medical treatment,
+				                            you should visit a doctor (known as a general practitioner
+				                            or GP in Ireland). GPs provide a broad range of services to their
+				                            patients on all health issues, and may refer patients to see specialists
+				                            or hospital consultants if required. GP clinics are normally open during the 
+				                            daytime and early evening.
+				                            <br><br><h2>Language Difficulties</h2>
+				                            Some international students can experience language difficulties and problems understanding 
+				                            accents at first. Likewise, lecturers and domestic students might experience difficulties adjusting 
+				                            to your accent!
+				                            To alleviate these problems, it may be useful to try speaking more slowly and clearly than you usually 
+				                            would and, likewise, if you have difficulty understanding other people in your class (or the lecturer), 
+				                            it is quite acceptable to approach the tutor or the lecturer, explain your problem, and ask that they do the same for you.
+				                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -58,48 +77,6 @@
     <!-- Static Article  End-->
 <!-- ******************************************************************************************* -->
 
-
-<!-- ******************************************************************************************* -->
-    <!-- Static Article Additional info  Start-->
-
-    <div class="wrapper row3 ">
-        <div class="hoc container clear"> 
-            <div class="group">
-                <section class="blog-posts">
-                    <div class="sidebar-item submit-comment">
-                        <div class="sidebar-heading">
-                            <h2>Your Mental Health</h2>
-                            <p>Living and studying in a new country is normally a highly positive and life 
-                            changing experience. However, sometimes the challenges that come with moving
-                            to a different country can be very stressful.
-                            Sometimes we suffer in silence unnecessarily, when the best way 
-                            to deal with a problem is by asking for help.
-                            </p>
-                        </div>
-                        <div class="sidebar-heading">
-                            <h2>Non-Emergency Medical Treatment</h2>
-                            <p>Normally when you are sick or need medical treatment,
-                            you should visit a doctor (known as a general practitioner
-                            or GP in Ireland). GPs provide a broad range of services to their
-                            patients on all health issues, and may refer patients to see specialists
-                            or hospital consultants if required. GP clinics are normally open during the 
-                            daytime and early evening.
-                            </p>
-                        </div>
-                        <div class="sidebar-heading">
-                            <h2>Language Difficulties</h2>
-                            <p>Some international students can experience language difficulties and problems understanding accents at first. Likewise, lecturers and domestic students might experience difficulties adjusting to your accent!
-                            </p>
-                            <p>To alleviate these problems, it may be useful to try speaking more slowly and clearly than you usually would and, likewise, if you have difficulty understanding other people in your class (or the lecturer), it is quite acceptable to approach the tutor or the lecturer, explain your problem, and ask that they do the same for you.</p>
-                        </div>                       
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-       
-    <!-- Static Article Additional info  End-->
-<!-- ******************************************************************************************* -->
 
 	<%@ include file="footer.jsp" %>
 
