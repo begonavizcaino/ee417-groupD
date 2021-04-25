@@ -15,6 +15,14 @@
     margin: 0 100px;
 }*/
 
+.post-info a{
+	padding-right: 10px;
+}
+
+.post-tags i{
+	padding-right: 10px;
+}
+
 .profile-header
 {
     background: #ffff;

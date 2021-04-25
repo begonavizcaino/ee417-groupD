@@ -219,9 +219,9 @@ h1, h2, h3, h4, h5, h6, .heading{
     padding:8px 40px 8px 10px;
     font-size:1rem;
 }
-#topbar #searchform ::placeholder{
+/*#topbar #searchform ::placeholder{
     text-transform:capitalize;
-}
+}*/
 #topbar #searchform button{
     display:block;
     position:absolute;
@@ -1084,7 +1084,6 @@ ul.page-numbers li a:hover {
 	height: 46px;
 	border: 1px solid #eee;
 	font-size: 13px;
-	text-transform: uppercase;
 	font-weight: 500;
 	color: #7a7a7a;
 	outline: none;
@@ -1097,7 +1096,6 @@ ul.page-numbers li a:hover {
 	height: 46px;
 	border: 1px solid #eee;
 	font-size: 13px;
-	text-transform: uppercase;
 	font-weight: 500;
 	color: #7a7a7a;
 	outline: none;
@@ -1147,7 +1145,6 @@ ul.page-numbers li a:hover {
 
 .sidebar .sidebar-heading h2 {
 	font-size: 18px;
-	text-transform: uppercase;
 	font-weight: 900;
 	letter-spacing: 0.5px;
 	color: #20232e;
@@ -1161,7 +1158,6 @@ ul.page-numbers li a:hover {
 	height: 50px;
 	border: 1px solid #eee;
 	font-size: 13px;
-	text-transform: uppercase;
 	font-weight: 500;
 	color: #7a7a7a;
 	outline: none;

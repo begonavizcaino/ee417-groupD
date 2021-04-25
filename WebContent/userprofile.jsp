@@ -80,11 +80,10 @@ if(u == null) {
 							    <div class="blog-post">
 							    	<% if(ac.size() > 0) { %>
 								        <div class="blog-thumb">
-								            <img src="<%= ac.get(0).getContent()  %>" alt="">
+								            <img src="<%= ac.get(0).getContent()%>" alt="">
 							        	</div>
 									<% } %>
 							        <div class="down-content">
-							            <span>Academic</span>
 							            <a href="post.jsp?postid=<%= p.getId() %>"><h4><%= p.getTitle() %></h4></a>
 							            <ul class="post-info">
 							                <li><a href=""><%= u.getName() %></a></li>
