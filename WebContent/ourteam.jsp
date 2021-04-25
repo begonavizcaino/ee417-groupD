@@ -27,74 +27,54 @@
         <section class="hoc container clear team-block" > 
             <div class="sectiontitle center">
                     <h3 class="heading">Meet Our Team</h3>
-                    <p>Content Creators</p>
             </div>
             <div class="one_quarter first team-member" >
                 <div class="team-member__pic">
-                    <img src="images/team1.jpg"  alt="">
+                    <img src="images/BegoVizcaino.JPG"  alt="">
                 </div>
                 <div class="team-member__info">
                     <p class="team-member__name">
-                        Sarah Parker xx
+                        Bego Vizcaino
                         <span>Project Manager</span>
                     </p>
-                    <ul class="team-member__social">
-                        <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    </ul>
+                    <p> I am a masters student from Spain, currently specializing in Image Processing at DCU.</p> 
                 </div>
             </div>
             <div class="one_quarter  team-member" >
                 <div class="team-member__pic">
-                    <img src="images/team2.jpg"  alt="">
+                    <img src="images/CJ_pic_1.jpg"  alt="">
                 </div>
                 <div class="team-member__info">
                     <p class="team-member__name">
-                        Edward Jan xx
-                        <span>Public Relation</span>
+                        Colum Jones
+                        <span>Project Documentation</span>
                     </p>
-                    <ul class="team-member__social">
-                        <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    </ul>
+                    <p> A Masters level student in Computing & Engineering at DCU.</p> 
                 </div>
             </div>
             <div class="one_quarter  team-member" >
                 <div class="team-member__pic">
-                    <img src="images/team3.jpg"  alt="">
+                    <img src="images/Etienne.jpg"  alt="">
                 </div>
                 <div class="team-member__info">
                     <p class="team-member__name">
-                        Derek Silver xx
-                        <span>Social Media </span>
+                        Etienne Desrousseaux
+                        <span>Database designer & Backend developer</span>
                     </p>
-                    <ul class="team-member__social">
-                        <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    </ul>
+                    <p>I am an engineering student pursuing a degree in data science at ECE Paris. I am currently studying at DCU for an exchange semester. I also co-founded the startup Home-Viewer, of which I am acting CTO.
+                    </p>
                 </div>
             </div>
             <div class="one_quarter  team-member" >
                 <div class="team-member__pic">
-                    <img src="images/team4.jpg"  alt="">
+                    <img src="images/Jainam.jpg"  alt="">
                 </div>
                 <div class="team-member__info">
                     <p class="team-member__name">
-                        Sarah Parker xx
-                        <span>Student Support</span>
+                        Jainam Sheth
+                        <span>Frontend developer</span>
                     </p>
-                    <ul class="team-member__social">
-                        <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    </ul>
+                    <p>Currently pursuing a masters degree at DCU with a major in Advanced Data Networks.</p>
                 </div>
             </div>
 
@@ -105,25 +85,16 @@
 
     <div class="wrapper row3 coloured">
         <section class="hoc container clear team-block" > 
-            <div class="sectiontitle center">
-                    <h3 class="heading">Meet Our Team</h3>
-                    <p> Public Relation & Logistics</p>
-            </div>
             <div class="one_quarter first team-member" >
                 <div class="team-member__pic">
-                    <img src="images/team1.jpg"  alt="">
+                    <img src="images/Jiahuan.jpg"  alt="">
                 </div>
                 <div class="team-member__info">
                     <p class="team-member__name">
-                        Sarah Parker xx
-                        <span>Project Manager</span>
+                        Jiahuan Zou
+                        <span>Javascript developer</span>
                     </p>
-                    <ul class="team-member__social">
-                        <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    </ul>
+                    <p> Comes from China and majored in ECE at DCU now. Also a game developer.</p>
                 </div>
             </div>
             <div class="one_quarter  team-member" >
