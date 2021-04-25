@@ -123,12 +123,17 @@
  
  function addConvListListener() {
     $(".conversation").first().css("background", "orange")
+    $("#chat-title").html($(".conversation:eq(0)").children(".title-text").html())
     $(".conversation").click(function() {
         $(".conversation").css("background", "")
         $(this).css("background", "orange")
         const conv_id = Number($(this).children(".conversation-convid").html())
         cur_conv_id = conv_id
         showChatContent(conv_id)
+
+        // modify title
+        const str = $(this).children(".title-text").html()
+        $("#chat-title").html(str)
     })
 }
  
