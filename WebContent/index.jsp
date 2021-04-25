@@ -33,7 +33,12 @@
                                     <span>Academic</span>
                                 </div>
                                 <div class="link-to-posts">
-                                <li><a href="main.jsp?category=1"><h4>Student Support Stories</h4></a></li>
+                                    <a href="post.jsp?postid=26"><h4>Howth</h4></a>
+                                    <ul class="post-info">
+                                        <li><a href="#">bego.vigi@gmail.com</a></li>
+                                        <li><a href="#">April 25th, 2021</a></li>
+                                        <li><a href="#">0 Comments</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -43,13 +48,13 @@
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
-                                    <span>College Life</span>
+                                    <span>Academic</span>
                                 </div>
-                                <a href="post1.jsp"><h4>Staying Productive</h4></a>
+                                <a href="post.jsp?postid=27"><h4>My Experience As International Student During COVID</h4></a>
                                 <ul class="post-info">
-                                    <li><a href="#">Admin</a></li>
-                                    <li><a href="#">April 18th, 2021</a></li>
-                                    <li><a href="#">4 Comments</a></li>
+                                    <li><a href="#">bego.vigi@gmail.com</a></li>
+                                    <li><a href="#">April 25th, 2021</a></li>
+                                    <li><a href="#">0 Comments</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -59,12 +64,12 @@
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
-                                    <span>Campus</span>
+                                    <span>Academic</span>
                                 </div>
-                                <a href="post1.jsp"><h4>Making most of your day</h4></a>
+                                <a href="post.jsp?postid=28"><h4>Experience Living In A Shared Room</h4></a>
                                 <ul class="post-info">
-                                    <li><a href="#">Admin</a></li>
-                                    <li><a href="#">April 18th, 2021</a></li>
+                                    <li><a href="#">bego.vigi@gmail.com</a></li>
+                                    <li><a href="#">April 25th, 2021</a></li>
                                     <li><a href="#">4 Comments</a></li>
                                 </ul>
                             </div>
@@ -77,11 +82,11 @@
                                 <div class="meta-category">
                                     <span>Academic</span>
                                 </div>
-                                <a href="#"><h4>Student Support Stories</h4></a>
+                                <a href="post.jsp?postid=29"><h4>Free Tour Around Dublin</h4></a>
                                 <ul class="post-info">
-                                    <li><a href="#">Admin</a></li>
-                                    <li><a href="#">April 18th, 2021</a></li>
-                                    <li><a href="#">4 Comments</a></li>
+                                    <li><a href="#">bego.vigi@gmail.com</a></li>
+                                    <li><a href="#">April 25th, 2021</a></li>
+                                    <li><a href="#">0 Comments</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -91,13 +96,13 @@
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
-                                    <span>College Life</span>
+                                    <span>Academic</span>
                                 </div>
-                                <a href="post1.jsp"><h4>Staying Productive</h4></a>
+                                <a href="post.jsp?postid=30"><h4>What I Have Learnt</h4></a>
                                 <ul class="post-info">
-                                    <li><a href="#">Admin</a></li>
-                                    <li><a href="#">April 18th, 2021</a></li>
-                                    <li><a href="#">4 Comments</a></li>
+                                    <li><a href="#">bego.vigi@gmail.com</a></li>
+                                    <li><a href="#">April 25th, 2021</a></li>
+                                    <li><a href="#">0 Comments</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -107,13 +112,13 @@
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
-                                    <span>Campus</span>
+                                    <span>Academic</span>
                                 </div>
-                                <a href="post1.jsp"><h4>Making most of your day</h4></a>
+                                <a href="post.jsp?postid=31"><h4>Bray</h4></a>
                                 <ul class="post-info">
-                                    <li><a href="#">Admin</a></li>
-                                    <li><a href="#">April 18th, 2021</a></li>
-                                    <li><a href="#">4 Comments</a></li>
+                                    <li><a href="#">bego.vigi@gmail.com</a></li>
+                                    <li><a href="#">April 25th, 2021</a></li>
+                                    <li><a href="#">0 Comments</a></li>
                                 </ul>
                             </div>
                         </div>

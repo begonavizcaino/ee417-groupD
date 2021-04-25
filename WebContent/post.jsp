@@ -17,16 +17,11 @@ ArrayList<Post> comments;
 
 ArrayList<AttachedContent> contents;
 
-try {
 	int postId = Integer.parseInt(request.getParameter("postid"));
 	post = Database.postDao.findOneById(postId);
 	if(post == null || post.getParentPost() == null) throw new Exception();
 	comments = post.getComments();// each getComments is a sql query, let's make only one
 	contents = post.getAttachedContent();
-} catch(Exception e) {
-	response.sendRedirect("./main.jsp");
-	return;// stop the rest of the html from being sent alongside the redirect (faster + safer)
-}
 %>
 <!DOCTYPE html>
 <html>
