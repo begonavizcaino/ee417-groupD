@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <div class="owl-banner owl-carousel owl-loaded owl-drag">
                     <div class="item">
-                        <img src="images/intro.jpg" style="filter: brightness(0.4)" alt="">
+                        <img src="images/howth.jpeg" style="filter: brightness(0.4)" alt="">
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/productivity.jpg"style="filter: brightness(0.4)" alt="">
+                        <img src="images/studyhome.jpeg"style="filter: brightness(0.4)" alt="">
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/intro3.jpg" style="filter: brightness(0.4)" alt="">
+                        <img src="images/room.jpeg" style="filter: brightness(0.4)" alt="">
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/intro.jpg" style="filter: brightness(0.4)" alt="">
+                        <img src="images/free-tour.jpeg" style="filter: brightness(0.4)" alt="">
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/intro2.jpg"style="filter: brightness(0.4)" alt="">
+                        <img src="images/studying.jpeg"style="filter: brightness(0.4)" alt="">
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/intro3.jpg" style="filter: brightness(0.4)" alt="">
+                        <img src="images/bray.jpeg" style="filter: brightness(0.4)" alt="">
                         <div class="item-content">
                             <div class="main-content">
                                 <div class="meta-category">

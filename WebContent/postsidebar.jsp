@@ -8,7 +8,7 @@
                 <div class="col-lg-12">
                     <div class="sidebar-item search">
                         <!-- <form id="search_form" name="gs" method="GET" action="#"> -->
-                        <input id="search_by_title" type="text" name="q" class="searchText" placeholder="type title to search..." autocomplete="on">
+                        <input id="search_by_title" type="text" name="q" class="searchText" placeholder="Type title to search..." autocomplete="on">
                         <!-- </form> -->
                     </div>
                 </div>
