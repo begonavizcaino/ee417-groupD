@@ -9,11 +9,13 @@ import java.util.HashMap;
 public class Conversation extends TableRowId {
 	private String title;
 	private String image;
+	private int convId;
 	
 	public Conversation(ResultSet rs) throws SQLException {
 		super(rs);
 		title = rs.getString("title");
 		image = rs.getString("image");
+		convId = rs.getInt("id");
 	}
 	
 	public Conversation(int userId, String title, String image) {
@@ -36,6 +38,10 @@ public class Conversation extends TableRowId {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+	
+	public int getConvId() {
+		return this.convId;
 	}
 
 	public ArrayList<ConvMessage> getMessages() throws SQLException {

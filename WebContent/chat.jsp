@@ -55,6 +55,9 @@ if(u == null) {
 	                    	out.print(m == null ? "" : m.getMessage());
 	                    %>
 	                </div>
+                    <p class="conversation-convid" style="display: none;">
+                        <%= c.getConvId() %>
+                    </p>
 	            </div>
         	<% } %>
         </div>
